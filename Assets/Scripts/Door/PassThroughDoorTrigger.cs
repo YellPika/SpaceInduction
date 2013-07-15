@@ -1,10 +1,14 @@
 using UnityEngine;
 
+// Closes a door when an object passes from one side of the door to the other.
+// Does not open the door.
 [RequireComponent(typeof(Collider))]
 public sealed class PassThroughDoorTrigger : MonoBehaviour
 {
     [SerializeField]
     private DoorBehaviour target;
+
+    // Kinda abstract. Don't mess with it.
     private int state;
 
     private void Awake()

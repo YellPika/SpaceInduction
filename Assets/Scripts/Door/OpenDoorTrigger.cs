@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Opens a door when a collider is triggered.
+// Does not close the door.
 [RequireComponent(typeof(Collider))]
 public sealed class OpenDoorTrigger : MonoBehaviour
 {
@@ -8,9 +10,7 @@ public sealed class OpenDoorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.GetComponent<DoorOpener>() == null)
-            return;
-
-        target.Open();
+        if (collider.GetComponent<DoorOpener>() != null)
+            target.Open();
     }
 }

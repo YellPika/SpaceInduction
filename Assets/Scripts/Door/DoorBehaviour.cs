@@ -1,14 +1,23 @@
+using System;
 using UnityEngine;
 
+// Specialized logic for operating the door tile.
 public sealed class DoorBehaviour : MonoBehaviour
 {
     [SerializeField]
     private bool open = false;
-    private bool initialState;
+
+    // For resetting purposes.
+    private bool initiallyOpen;
+
+    public bool IsOpen { get { return open; } }
+
+    public event EventHandler Opened;
+    public event EventHandler Closed;
 
     private void Awake()
     {
-        initialState = open;
+        initiallyOpen = open;
 
         if (open)
             animation.Play("Door.Open");
@@ -16,7 +25,7 @@ public sealed class DoorBehaviour : MonoBehaviour
 
     private void Restart()
     {
-        if (initialState)
+        if (initiallyOpen)
             Open();
         else
             Close();
@@ -29,6 +38,9 @@ public sealed class DoorBehaviour : MonoBehaviour
         
         animation.Play("Door.Open");
         open = true;
+
+        if (Opened != null)
+            Opened(this, EventArgs.Empty);
         
         return true;
     }
@@ -40,6 +52,9 @@ public sealed class DoorBehaviour : MonoBehaviour
 
         animation.Play("Door.Close");
         open = false;
+
+        if (Closed != null)
+            Closed(this, EventArgs.Empty);
 
         return true;
     }
