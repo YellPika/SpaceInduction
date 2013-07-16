@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(GeneratorBehaviour))]
 public sealed class GeneratorDoorTrigger : MonoBehaviour
 {
     [SerializeField]
