@@ -5,6 +5,7 @@ public enum ElevatorState { Up, Down }
 // Logic for operating the elevator.
 public sealed class ElevatorBehaviour : MonoBehaviour
 {
+    private ElevatorState initialState;
     private bool isFull;
 
     [SerializeField]
@@ -13,6 +14,8 @@ public sealed class ElevatorBehaviour : MonoBehaviour
 
     private void Awake()
     {
+        initialState = state;
+
         animation.Play("Elevator." + state);
 
         GetComponentInChildren<ElevatorEnterTrigger>().Triggered +=
@@ -36,5 +39,11 @@ public sealed class ElevatorBehaviour : MonoBehaviour
             {
                 isFull = false;
             };
+    }
+
+    private void Reset()
+    {
+        state = initialState;
+        animation.Play("Elevator." + state);
     }
 }
