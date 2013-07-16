@@ -491,7 +491,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 452aef426256a0d448eb0186abcceae6, type: 3}
   m_Name: 
-  value: 1
+  value: 0
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
