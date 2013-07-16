@@ -19,7 +19,14 @@ public sealed class GeneratorBehaviour : MonoBehaviour
                     target.enabled = true;
                     setSource.Targets.Add(target.GetComponent<PowerProperty>());
                 }
+
+                animation.Play();
             };
+    }
+
+    private void Spin()
+    {
+        animation.Play("Generator.Spin");
     }
 
 #if UNITY_EDITOR
