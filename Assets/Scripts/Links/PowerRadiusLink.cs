@@ -15,5 +15,6 @@ public sealed class PowerRadiusLink : Link<PowerProperty, float>
     protected override void SetValue(float value)
     {
         sphere.radius = value * baseRadius;
+        sphere.enabled = value > 0;
     }
 }
