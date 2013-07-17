@@ -4,11 +4,12 @@ using UnityEngine;
 // Specialized logic for operating the door tile.
 public sealed class DoorBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private bool open = false;
-
     // For resetting purposes.
     private bool initiallyOpen;
+    private OcclusionPortal portal;
+
+    [SerializeField]
+    private bool open = false;
 
     public bool IsOpen { get { return open; } }
 
@@ -18,6 +19,8 @@ public sealed class DoorBehaviour : MonoBehaviour
     private void Awake()
     {
         initiallyOpen = open;
+        
+        portal = GetComponent<OcclusionPortal>();
 
         if (open)
             animation.Play("Door.Open");
@@ -35,13 +38,13 @@ public sealed class DoorBehaviour : MonoBehaviour
     {
         if (open)
             return false;
-        
+
         animation.Play("Door.Open");
         open = true;
 
         if (Opened != null)
             Opened(this, EventArgs.Empty);
-        
+
         return true;
     }
 
@@ -58,4 +61,8 @@ public sealed class DoorBehaviour : MonoBehaviour
 
         return true;
     }
+
+    // Called via an animation event.
+    private void OpenPortal() { portal.open = true; }
+    private void ClosePortal() { portal.open = false; }
 }
