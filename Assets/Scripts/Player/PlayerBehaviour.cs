@@ -24,14 +24,11 @@ public sealed class PlayerBehaviour : MonoBehaviour
         level = GetComponent<LevelInventory>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         transform.rotation = Quaternion.Euler(0, -wheel.TurnAmount, 0);
         transform.position = wheel.transform.position + offset;
-    }
 
-    private void Update()
-    {
         if (power.Value == 0 && level.Current != null)
             level.Current.Restart();
     }
