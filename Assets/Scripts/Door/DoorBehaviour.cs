@@ -40,6 +40,8 @@ public sealed class DoorBehaviour : MonoBehaviour
             return false;
 
         animation.Play("Door.Open");
+        audio.Play();
+
         open = true;
 
         if (Opened != null)
@@ -54,6 +56,8 @@ public sealed class DoorBehaviour : MonoBehaviour
             return false;
 
         animation.Play("Door.Close");
+        audio.Play();
+
         open = false;
 
         if (Closed != null)
