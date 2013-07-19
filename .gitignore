@@ -7,3 +7,5 @@
 *.unityproj
 *.sln
 *.suo
+*.userprefs
+*.pidb
