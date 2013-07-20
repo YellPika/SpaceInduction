@@ -6,8 +6,15 @@ public sealed class GeneratorBehaviour : MonoBehaviour
     [SerializeField]
     private PowerSource[] targets;
 
+    // For resetting purposes.
+    private bool[] initialValues;
+
     private void Awake()
     {
+        initialValues = targets
+            .Select(n => n.enabled)
+            .ToArray();
+
         GetComponentInChildren<GeneratorTriggerBehaviour>().Triggered +=
             (sender, e) =>
             {
@@ -16,17 +23,11 @@ public sealed class GeneratorBehaviour : MonoBehaviour
                 gameObject.AddComponent<SelfPowerSource>();
 
                 var setSource = gameObject.AddComponent<SetPowerSource>();
-                foreach (var target in targets)
-                {
-                    target.enabled = true;
-                    setSource.Targets.Add(target.GetComponent<PowerProperty>());
-                }
-            };
-    }
+                setSource.Targets.AddRange(targets.Select(n => n.GetComponent<PowerProperty>()));
 
-    private void Spin()
-    {
-        animation.Play("Generator.Spin");
+                foreach (var target in targets)
+                    target.enabled = true;
+            };
     }
 
     private void Restart()
@@ -37,8 +38,13 @@ public sealed class GeneratorBehaviour : MonoBehaviour
         if (setSource != null)
             Destroy(setSource);
 
-        foreach (var target in targets)
-            target.enabled = false;
+        for (int i = 0; i < targets.Length; i++)
+            targets[i].enabled = initialValues[i];
+    }
+
+    private void Spin()
+    {
+        animation.Play("Generator.Spin");
     }
 
 #if UNITY_EDITOR

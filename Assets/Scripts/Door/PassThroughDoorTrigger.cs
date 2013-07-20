@@ -50,4 +50,9 @@ public sealed class PassThroughDoorTrigger : MonoBehaviour
             };
         }
     }
+
+    private void Restart()
+    {
+        state = 0;
+    }
 }

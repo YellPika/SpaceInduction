@@ -33,6 +33,8 @@ public sealed class PlayerBehaviour : MonoBehaviour
         {
             level.Current.Restart();
 
+            // DO NOT do this before/in Restart(), otherwise the player could reset before
+            // the rest of the level, resulting in some strange stuff.
             var wheelOffset = wheel.transform.position - transform.position;
             var bodyOffset = body.transform.position - transform.position;
 
