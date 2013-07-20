@@ -8,7 +8,7 @@ public sealed class GeneratorDoorTrigger : MonoBehaviour
 
     private void Awake()
     {
-        GetComponentInChildren<GeneratorTriggerBehaviour>().Triggered +=
+        GetComponentInChildren<GeneratorBehaviour>().Started +=
             (sender, e) => target.Open();
     }
 }

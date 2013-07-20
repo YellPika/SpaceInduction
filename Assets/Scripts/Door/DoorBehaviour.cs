@@ -10,7 +10,6 @@ public sealed class DoorBehaviour : MonoBehaviour
 
     [SerializeField]
     private bool open = false;
-
     public bool IsOpen { get { return open; } }
 
     public event EventHandler Opened;

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -9,25 +10,33 @@ public sealed class GeneratorBehaviour : MonoBehaviour
     // For resetting purposes.
     private bool[] initialValues;
 
+    public event EventHandler Started;
+
     private void Awake()
     {
         initialValues = targets
             .Select(n => n.enabled)
             .ToArray();
 
-        GetComponentInChildren<GeneratorTriggerBehaviour>().Triggered +=
-            (sender, e) =>
+        var trigger = GetComponentInChildren<GeneratorTrigger>();
+        trigger.Triggered += (sender, e) =>
+        {
+            // Only do this when all the rods are inserted.
+            if (trigger.InsertionCount != trigger.RodCount)
+                return;
+
+            animation.Play();
+
+            var setSource = gameObject.AddComponent<SetPowerSource>();
+            foreach (var target in targets)
             {
+                setSource.Targets.Add(target.GetComponent<PowerProperty>());
+                target.enabled = true;
+            }
 
-                animation.Play("Generator.Start");
-                gameObject.AddComponent<SelfPowerSource>();
-
-                var setSource = gameObject.AddComponent<SetPowerSource>();
-                setSource.Targets.AddRange(targets.Select(n => n.GetComponent<PowerProperty>()));
-
-                foreach (var target in targets)
-                    target.enabled = true;
-            };
+            if (Started != null)
+                Started(this, EventArgs.Empty);
+        };
     }
 
     private void Restart()

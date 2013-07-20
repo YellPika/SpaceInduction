@@ -13,5 +13,6 @@ public sealed class LightIntensityLink : Link<IntensityProperty, float>
     protected override void SetValue(float value)
     {
         light.intensity = baseIntensity * value;
+        light.enabled = value > 0;
     }
 }
