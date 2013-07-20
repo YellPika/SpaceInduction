@@ -402,7 +402,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
-  value: 1
+  value: .00999999978
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
