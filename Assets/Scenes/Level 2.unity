@@ -1185,7 +1185,6 @@ GameObject:
   - 23: {fileID: 147551230}
   - 114: {fileID: 147551229}
   - 114: {fileID: 147551228}
-  - 54: {fileID: 147551227}
   m_Layer: 0
   m_Name: Rod_Top
   m_TagString: Untagged
@@ -1204,22 +1203,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641130231}
---- !u!54 &147551227
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400004, guid: 4e62c3570b5d5414c8a0d99fcd213c41,
-    type: 2}
-  m_PrefabInternal: {fileID: 205296620}
-  m_GameObject: {fileID: 147551225}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &147551228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5311,7 +5294,6 @@ GameObject:
   - 23: {fileID: 1097318732}
   - 114: {fileID: 1097318731}
   - 114: {fileID: 1097318730}
-  - 54: {fileID: 1097318729}
   m_Layer: 0
   m_Name: Rod_Left
   m_TagString: Untagged
@@ -5330,22 +5312,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641130231}
---- !u!54 &1097318729
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 4e62c3570b5d5414c8a0d99fcd213c41,
-    type: 2}
-  m_PrefabInternal: {fileID: 205296620}
-  m_GameObject: {fileID: 1097318727}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1097318730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6638,7 +6604,6 @@ GameObject:
   - 23: {fileID: 1390795394}
   - 114: {fileID: 1390795393}
   - 114: {fileID: 1390795392}
-  - 54: {fileID: 1390795391}
   m_Layer: 0
   m_Name: Rod_Right
   m_TagString: Untagged
@@ -6657,22 +6622,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641130231}
---- !u!54 &1390795391
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400002, guid: 4e62c3570b5d5414c8a0d99fcd213c41,
-    type: 2}
-  m_PrefabInternal: {fileID: 205296620}
-  m_GameObject: {fileID: 1390795389}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1390795392
 MonoBehaviour:
   m_ObjectHideFlags: 0
