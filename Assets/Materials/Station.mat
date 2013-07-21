@@ -37,7 +37,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .47339645
+        second: 1
       data:
         first:
           name: _Intensity
@@ -50,7 +50,7 @@ Material:
       data:
         first:
           name: _SpecColor
-        second: {r: .501960814, g: .501960814, b: .501960814, a: 1}
+        second: {r: .125490203, g: .125490203, b: .125490203, a: 1}
       data:
         first:
           name: _CeilingEmitColor
