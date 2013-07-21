@@ -1430,7 +1430,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 1, z: 2.5}
-  m_Center: {x: 0, y: 0, z: 1.25000024}
+  m_Center: {x: 0, y: .5, z: 1.25}
 --- !u!64 &245884419
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1887,7 +1887,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400010, guid: 7919386f45dd23e469384890f62b273d, type: 2}
   m_PrefabInternal: {fileID: 10085163}
   m_GameObject: {fileID: 300960437}
-  m_LocalRotation: {x: 0, y: -1.08367249e-06, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.49999988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1956,12 +1956,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a773099f140e846f7835d27351846623, type: 3}
   m_Name: 
-  tweakMode: 1
+  tweakMode: 0
   screenBlendMode: 1
   hdr: 0
-  sepBlurSpread: 2.5
+  sepBlurSpread: 10
   quality: 1
-  bloomIntensity: .5
+  bloomIntensity: 1
   bloomThreshhold: .5
   bloomThreshholdColor: {r: 1, g: 1, b: 1, a: 1}
   bloomBlurIterations: 2
@@ -1969,7 +1969,7 @@ MonoBehaviour:
   flareRotation: 0
   lensflareMode: 1
   hollyStretchWidth: 2.5
-  lensflareIntensity: 1
+  lensflareIntensity: 0
   lensflareThreshhold: .300000012
   lensFlareSaturation: .75
   flareColorA: {r: .400000006, g: .400000006, b: .800000012, a: .75}
@@ -1995,11 +1995,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd05e71c69dd4457fa205c9eea7c2326, type: 3}
   m_Name: 
-  type: 5
+  type: 1
   adaptiveTextureSize: 256
   remapCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   exposureAdjustment: 1.5
