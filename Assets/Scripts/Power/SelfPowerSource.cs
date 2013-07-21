@@ -1,9 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(PowerProperty))]
 public sealed class SelfPowerSource : PowerSource
 {
-    protected override IEnumerable<PowerProperty> GetTargets()
+    [SerializeField]
+    private float efficiency;
+    private PowerProperty power;
+
+    private void Awake()
     {
-        yield return Power;
+        power = GetComponent<PowerProperty>();
+    }
+
+    private void Update()
+    {
+        power.Apply(power.Value - (1 - efficiency) * Time.deltaTime);
     }
 }

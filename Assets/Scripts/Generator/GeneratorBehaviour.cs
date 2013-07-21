@@ -30,7 +30,10 @@ public sealed class GeneratorBehaviour : MonoBehaviour
             var setSource = gameObject.AddComponent<SetPowerSource>();
             foreach (var target in targets)
             {
-                setSource.Targets.Add(target.GetComponent<PowerProperty>());
+                var power = target.GetComponent<PowerProperty>();
+                if (power != null)
+                    setSource.Targets.Add(power);
+
                 target.enabled = true;
             }
 

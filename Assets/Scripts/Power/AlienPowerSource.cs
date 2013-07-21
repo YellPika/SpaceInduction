@@ -2,10 +2,10 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public sealed class ColliderPowerSource : PowerSource
+public sealed class AlienPowerSource : PowerSource
 {
     [SerializeField]
-    private float power = 1;
+    private float power = 0.75f;
     private List<PowerProperty> targets = new List<PowerProperty>();
 
     private void OnTriggerEnter(Collider collider)
@@ -25,6 +25,11 @@ public sealed class ColliderPowerSource : PowerSource
     private void Update()
     {
         foreach (var target in targets)
-            target.Apply(power);
+        {
+            if (target.GetComponent<PlayerBehaviour>() != null)
+                target.Apply(power * Time.deltaTime * -0.5f);
+            else
+                target.Apply(-power);
+        }
     }
 }

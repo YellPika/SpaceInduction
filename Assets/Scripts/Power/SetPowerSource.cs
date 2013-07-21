@@ -4,12 +4,15 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public sealed class SetPowerSource : PowerSource
 {
-    private List<PowerProperty> targets = new List<PowerProperty>();
+    [SerializeField]
+    private float power = 1;
 
+    private List<PowerProperty> targets = new List<PowerProperty>();
     public List<PowerProperty> Targets { get { return targets; } }
 
-    protected override IEnumerable<PowerProperty> GetTargets()
+    private void Update()
     {
-        return targets;
+        foreach (var target in targets)
+            target.Apply(power);
     }
 }
