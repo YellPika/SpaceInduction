@@ -11,6 +11,8 @@ public sealed class GeneratorBehaviour : MonoBehaviour
         GetComponentInChildren<GeneratorTriggerBehaviour>().Triggered +=
             (sender, e) =>
             {
+                
+                animation.Play("Generator.Start");
                 gameObject.AddComponent<SelfPowerSource>();
 
                 var setSource = gameObject.AddComponent<SetPowerSource>();
@@ -20,6 +22,11 @@ public sealed class GeneratorBehaviour : MonoBehaviour
                     setSource.Targets.Add(target.GetComponent<PowerProperty>());
                 }
             };
+    }
+
+    private void Spin()
+    {
+        animation.Play("Generator.Spin");
     }
 
 #if UNITY_EDITOR

@@ -27,7 +27,7 @@ public sealed class GeneratorTriggerBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         var inventory = collider.GetComponent<RodInventory>();
-        if (inventory == null)
+        if (inventory == null || inventory.Items.Count == 0)
             return;
 
         inventory.Items.RemoveAll(_ =>

@@ -24,31 +24,27 @@ public sealed class PlayerBehaviour : MonoBehaviour
         level = GetComponent<LevelInventory>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         transform.rotation = Quaternion.Euler(0, -wheel.TurnAmount, 0);
         transform.position = wheel.transform.position + offset;
-    }
 
-    private void Update()
-    {
         if (power.Value == 0 && level.Current != null)
+        {
             level.Current.Restart();
-    }
 
-    private void Restart()
-    {
-        var wheelOffset = wheel.transform.position - transform.position;
-        var bodyOffset = body.transform.position - transform.position;
+            var wheelOffset = wheel.transform.position - transform.position;
+            var bodyOffset = body.transform.position - transform.position;
 
-        transform.position = respawnPoint.Current.transform.position;
+            transform.position = respawnPoint.Current.transform.position;
 
-        wheel.transform.position = transform.position + wheelOffset;
-        wheel.rigidbody.velocity = Vector3.zero;
+            wheel.transform.position = transform.position + wheelOffset;
+            wheel.rigidbody.velocity = Vector3.zero;
 
-        body.transform.position = transform.position + bodyOffset;
-        body.rigidbody.velocity = Vector3.zero;
+            body.transform.position = transform.position + bodyOffset;
+            body.rigidbody.velocity = Vector3.zero;
 
-        wheel.TurnAmount = respawnPoint.Current.transform.rotation.eulerAngles.y;
+            wheel.TurnAmount = respawnPoint.Current.transform.rotation.eulerAngles.y;
+        }
     }
 }
