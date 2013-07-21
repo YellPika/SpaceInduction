@@ -187,7 +187,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
-  m_LocalRotation: {x: 0, y: -1.08367249e-06, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.49999988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -219,7 +219,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_HDR: 0
+  m_HDR: 1
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -483,7 +483,7 @@ MonoBehaviour:
   tweakMode: 0
   screenBlendMode: 1
   hdr: 0
-  sepBlurSpread: 2.5
+  sepBlurSpread: 10
   quality: 1
   bloomIntensity: 1
   bloomThreshhold: .5
@@ -501,7 +501,8 @@ MonoBehaviour:
   flareColorC: {r: .800000012, g: .400000006, b: .800000012, a: .75}
   flareColorD: {r: .800000012, g: .400000006, b: 0, a: .75}
   blurWidth: 1
-  lensFlareVignetteMask: {fileID: 0}
+  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
+    type: 3}
   lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
   screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
   blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
@@ -517,11 +518,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd05e71c69dd4457fa205c9eea7c2326, type: 3}
   m_Name: 
-  type: 5
+  type: 1
   adaptiveTextureSize: 256
   remapCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   exposureAdjustment: 1.5
