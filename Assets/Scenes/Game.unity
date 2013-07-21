@@ -11023,6 +11023,7 @@ GameObject:
   - 81: {fileID: 1435252025}
   - 114: {fileID: 1435252030}
   - 114: {fileID: 1435252029}
+  - 114: {fileID: 1435252031}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11167,6 +11168,21 @@ MonoBehaviour:
   adaptionSpeed: 1.5
   tonemapper: {fileID: 4800000, guid: 003377fc2620a44939dadde6fe3f8190, type: 3}
   validRenderTextureFormat: 1
+--- !u!114 &1435252031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1435252023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60b7af876f7b834f8e71abe2fc895b3, type: 3}
+  m_Name: 
+  shader: {fileID: 4800000, guid: 0ef06344b3fbdf54da106f360b0e6d42, type: 3}
+  Period: 4
+  Speed: 40
+  Intensity: .100000001
+  Color: {r: .501960814, g: 1, b: .501960814, a: 1}
 --- !u!1 &1438234687
 GameObject:
   m_ObjectHideFlags: 0
