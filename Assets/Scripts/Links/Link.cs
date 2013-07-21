@@ -6,9 +6,20 @@ public abstract class Link<TProperty, T> : MonoBehaviour
     [SerializeField]
     private TProperty target;
 
-    private void Update()
+    private void OnEnable()
     {
         SetValue(target.Value);
+        target.Changed += OnTargetChanged;
+    }
+
+    private void OnDisable()
+    {
+        target.Changed -= OnTargetChanged;
+    }
+
+    private void OnTargetChanged(object sender, PropertyChangedEventArgs<T> e)
+    {
+        SetValue(e.Value);
     }
 
     protected abstract void SetValue(T value);

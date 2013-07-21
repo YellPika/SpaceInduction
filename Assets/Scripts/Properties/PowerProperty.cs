@@ -9,8 +9,15 @@ public sealed class PowerProperty : Property<float>
         target = Value;
     }
 
+#if UNITY_EDITOR
+    private new void Update()
+    {
+        base.Update();
+#else
     private void Update()
     {
+#endif
+
         Value = Mathf.Clamp01(target);
         target = 0;
     }

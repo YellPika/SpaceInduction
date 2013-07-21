@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public sealed class GeneratorTriggerBehaviour : MonoBehaviour
+public sealed class GeneratorTrigger : MonoBehaviour
 {
     private GeneratorRodBehaviour[] rods;
     private int insertionCount = 0;
@@ -39,7 +39,7 @@ public sealed class GeneratorTriggerBehaviour : MonoBehaviour
                 return true;
             });
 
-        if (insertionCount == rods.Length && Triggered != null)
+        if (Triggered != null)
             Triggered(this, EventArgs.Empty);
     }
 }

@@ -7,6 +7,11 @@ public sealed class ProximityDoorTrigger : MonoBehaviour
     private DoorBehaviour target;
     private int occupants = 0;
 
+    private void Restart()
+    {
+        occupants = 0;
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.GetComponent<DoorOpener>() == null)

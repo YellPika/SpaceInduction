@@ -4,7 +4,6 @@
 public sealed class MaterialIntensityLink : Link<IntensityProperty, float>
 {
     private float baseIntensity;
-    private Material material;
 
     [SerializeField]
     private int index;
@@ -14,12 +13,11 @@ public sealed class MaterialIntensityLink : Link<IntensityProperty, float>
 
     private void Awake()
     {
-        material = renderer.materials[index];
-        baseIntensity = material.GetFloat(property);
+        baseIntensity = renderer.materials[index].GetFloat(property);
     }
 
     protected override void SetValue(float value)
     {
-        material.SetFloat(property, baseIntensity * value);
+        renderer.materials[index].SetFloat(property, baseIntensity * value);
     }
 }

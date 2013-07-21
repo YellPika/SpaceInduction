@@ -16,12 +16,14 @@ public sealed class IntensityPowerLink : Link<PowerProperty, float>
         targetValue = intensity.Value;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
-        if (intensity.Value < targetValue)
-            intensity.Value = Math.Min(intensity.Value + adaptability * Time.deltaTime, targetValue);
-        if (intensity.Value > targetValue)
-            intensity.Value = Math.Max(intensity.Value - adaptability * Time.deltaTime, targetValue);
+        var value = intensity.Value;
+        if (value < targetValue)
+            value = Math.Min(value + adaptability * Time.deltaTime, targetValue);
+        if (value > targetValue)
+            value = Math.Max(value - adaptability * Time.deltaTime, targetValue);
+        intensity.Value = value;
     }
 
     protected override void SetValue(float value)

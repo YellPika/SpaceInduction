@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Meshes/Thumbs.db.meta
 <<<<<<< HEAD
 guid: 8543f2a7178c70f429673108cbd8f479
 =======
 guid: 99a9073a663bc434da03b734c7ed33b5
 >>>>>>> 8247ec22e1d73eb5893d5cb9d9f219b6f01f138f
+=======
+guid: 024c0194cf6467f47918d3674a037834
+>>>>>>> 980bb3a7d9ed16b504c0c085263b3f4116aa4d0b:Assets/Editor.meta
 DefaultImporter:
   userData: 

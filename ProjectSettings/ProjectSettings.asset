@@ -11,14 +11,14 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Discharge
+  productName: Space Induction
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
-  m_RenderingPath: 2
+  m_RenderingPath: 1
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_UseDX11: 0
@@ -143,7 +143,10 @@ PlayerSettings:
   ps3SaveGameSlots: 1
   ps3TrialMode: 0
   flashStrippingLevel: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    data:
+      first: 7
+      second: 
   metroPackageName: Discharge
   metroPackageLogo: 
   metroPackageVersion: 
