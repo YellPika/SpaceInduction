@@ -4,7 +4,7 @@
 public sealed class SelfPowerSource : PowerSource
 {
     [SerializeField]
-    private float efficiency;
+    private float efficiency = 1;
     private PowerProperty power;
 
     private void Awake()
