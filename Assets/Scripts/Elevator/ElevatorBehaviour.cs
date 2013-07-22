@@ -41,7 +41,7 @@ public sealed class ElevatorBehaviour : MonoBehaviour
             };
     }
 
-    private void Reset()
+    private void Restart()
     {
         state = initialState;
         animation.Play("Elevator." + state);
