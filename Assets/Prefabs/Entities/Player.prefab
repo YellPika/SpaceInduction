@@ -117,6 +117,8 @@ GameObject:
   - 114: {fileID: 11400028}
   - 114: {fileID: 11400026}
   - 114: {fileID: 11400030}
+  - 114: {fileID: 11400038}
+  - 114: {fileID: 11400036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -423,7 +425,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f36a04fae5689b4796beb63bec2ae0a, type: 3}
   m_Name: 
-  efficiency: .966666639
+  efficiency: .977777779
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -585,7 +587,7 @@ MonoBehaviour:
   Period: 4
   Speed: 10
   Color: {r: 0, g: .5, b: 0, a: 1}
-  Intensity: .100000001
+  Intensity: .200000003
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -626,6 +628,96 @@ MonoBehaviour:
   shaderFXAAPreset3: {fileID: 4800000, guid: c182fa94a5a0a4c02870641efcd38cd5, type: 3}
   shaderFXAAII: {fileID: 4800000, guid: cd5b323dcc592457790ff18b528f5e67, type: 3}
   shaderFXAAIII: {fileID: 4800000, guid: c547503fff0e8482ea5793727057041c, type: 3}
+--- !u!114 &11400036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16c86fd826e95946bdfc386ac134066, type: 3}
+  m_Name: 
+  target: {fileID: 11400012}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -19.0000019
+      tangentMode: 21
+    - time: .049999997
+      value: .0500000007
+      inSlope: -19.0000019
+      outSlope: 1.24176353e-07
+      tangentMode: 21
+    - time: .139999986
+      value: .0500000119
+      inSlope: 1.24176353e-07
+      outSlope: 44.9999733
+      tangentMode: 21
+    - time: .149999991
+      value: .5
+      inSlope: 44.9999733
+      outSlope: -44.9999771
+      tangentMode: 21
+    - time: .159999996
+      value: .0500000007
+      inSlope: -44.9999771
+      outSlope: -0
+      tangentMode: 21
+    - time: .290000021
+      value: .0500000007
+      inSlope: 0
+      outSlope: 20.0000782
+      tangentMode: 21
+    - time: .299999982
+      value: .25
+      inSlope: 20.0000782
+      outSlope: -19.9999599
+      tangentMode: 21
+    - time: .310000002
+      value: .0500000007
+      inSlope: -19.9999599
+      outSlope: -0
+      tangentMode: 21
+    - time: .439999998
+      value: .0500000007
+      inSlope: 0
+      outSlope: 7.29484177
+      tangentMode: 21
+    - time: .449999988
+      value: .122948349
+      inSlope: 7.29484177
+      outSlope: -7.29484177
+      tangentMode: 21
+    - time: .459999979
+      value: .0500000007
+      inSlope: -7.29484177
+      outSlope: -0
+      tangentMode: 21
+    - time: 1
+      value: .0500000007
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 21
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &11400038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa114d3207645a141adb96f7e0c9fd71, type: 3}
+  m_Name: 
+  Shader: {fileID: 4800000, guid: c0ff6ae80a4b22f4d8a2f54717f35fea, type: 3}
+  Color: {r: .24626863, g: 0, b: 0, a: 1}
+  Intensity: .5
+  Opacity: .100000001
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -643,7 +735,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 7.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13500002
 SphereCollider:

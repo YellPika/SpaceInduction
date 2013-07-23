@@ -4,11 +4,41 @@ ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Rod_Bottom
+    100004: Rod_Left
+    100006: Rod_Right
+    100008: Rod_Top
+    100010: Rotor
     400000: //RootNode
+    400002: Rod_Bottom
+    400004: Rod_Left
+    400006: Rod_Right
+    400008: Rod_Top
+    400010: Rotor
     2300000: //RootNode
+    2300002: Rod_Bottom
+    2300004: Rod_Left
+    2300006: Rod_Right
+    2300008: Rod_Top
+    2300010: Rotor
     3300000: //RootNode
+    3300002: Rod_Bottom
+    3300004: Rod_Left
+    3300006: Rod_Right
+    3300008: Rod_Top
+    3300010: Rotor
     4300000: Mesh
+    4300002: Rotor
+    4300004: Rod_Left
+    4300006: Rod_Top
+    4300008: Rod_Right
+    4300010: Rod_Bottom
     6400000: //RootNode
+    6400002: Rod_Bottom
+    6400004: Rod_Left
+    6400006: Rod_Right
+    6400008: Rod_Top
+    6400010: Rotor
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -6,7 +6,6 @@ public sealed class DoorBehaviour : MonoBehaviour
 {
     // For resetting purposes.
     private bool initiallyOpen;
-    private OcclusionPortal portal;
 
     [SerializeField]
     private bool open = false;
@@ -19,8 +18,6 @@ public sealed class DoorBehaviour : MonoBehaviour
     {
         initiallyOpen = open;
         
-        portal = GetComponent<OcclusionPortal>();
-
         if (open)
             animation.Play("Door.Open");
     }
@@ -64,8 +61,4 @@ public sealed class DoorBehaviour : MonoBehaviour
 
         return true;
     }
-
-    // Called via an animation event.
-    private void OpenPortal() { portal.open = true; }
-    private void ClosePortal() { portal.open = false; }
 }
