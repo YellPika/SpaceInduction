@@ -8,7 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+<<<<<<< HEAD
+=======
   - 114: {fileID: 11400000}
+>>>>>>> 03a3fb00124aab1b9512a1a1136741df4ab48ae0
   m_Layer: 0
   m_Name: Glob Waypoint
   m_TagString: Untagged
@@ -23,6 +26,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: 7.04045725, y: 2.43668365, z: -5.97534609}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+=======
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -38,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164fc3d53060acb45b6aeb608f197341, type: 3}
   m_Name: 
   tolerance: .5
+>>>>>>> 03a3fb00124aab1b9512a1a1136741df4ab48ae0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
