@@ -560,10 +560,15 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+    - time: .399999976
+      value: .5
+      inSlope: 2.64518166
+      outSlope: 2.64518166
+      tangentMode: 0
     - time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -643,18 +648,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1.00259566
-      inSlope: -28.4793606
-      outSlope: -28.4793606
+      value: 1
+      inSlope: -63.4008751
+      outSlope: -63.4008751
       tangentMode: 0
-    - time: .099999994
+    - time: .049999997
       value: .049999997
       inSlope: .00282049808
       outSlope: .00282049808
       tangentMode: 0
     - time: .245000005
       value: .0500000007
-      inSlope: 2.5691655e-08
+      inSlope: 1.91040517e-08
       outSlope: 140.000137
       tangentMode: 21
     - time: .25
@@ -675,31 +680,31 @@ MonoBehaviour:
     - time: .5
       value: .5
       inSlope: 89.9995499
-      outSlope: -90.0000839
+      outSlope: -95.0000916
       tangentMode: 21
     - time: .504999995
-      value: .049999997
-      inSlope: -90.0000839
+      value: .0249999985
+      inSlope: -95.0000916
       outSlope: -0
       tangentMode: 21
     - time: .745000005
-      value: .049999997
+      value: .0249999985
       inSlope: 0
-      outSlope: 40.0000381
+      outSlope: 45.000042
       tangentMode: 21
     - time: .75
       value: .25
-      inSlope: 40.0000381
-      outSlope: -40.0000381
+      inSlope: 45.000042
+      outSlope: -25.0000248
       tangentMode: 21
-    - time: .754999995
-      value: .049999997
-      inSlope: -40.0000381
-      outSlope: 1.52052664e-08
+    - time: .75999999
+      value: 0
+      inSlope: -25.0000248
+      outSlope: -0
       tangentMode: 21
     - time: 1
-      value: .0500000007
-      inSlope: 1.52052664e-08
+      value: 0
+      inSlope: 0
       outSlope: 0
       tangentMode: 21
     m_PreInfinity: 2
