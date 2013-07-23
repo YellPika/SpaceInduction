@@ -8,6 +8,12 @@ public sealed class OpenDoorTrigger : MonoBehaviour
     [SerializeField]
     private DoorBehaviour target;
 
+    public DoorBehaviour Target
+    {
+        get { return target; }
+        set { target = value; }
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.GetComponent<DoorOpener>() != null)
