@@ -150,7 +150,6 @@ GameObject:
   - 4: {fileID: 28032075}
   - 65: {fileID: 28032083}
   - 111: {fileID: 28032082}
-  - 41: {fileID: 28032081}
   - 82: {fileID: 28032080}
   - 114: {fileID: 28032077}
   - 114: {fileID: 28032079}
@@ -313,16 +312,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!41 &28032081
-OcclusionPortal:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4100000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 1400561721}
-  m_GameObject: {fileID: 28032072}
-  m_Open: 1
-  m_Center: {x: 0, y: 1.25, z: 0}
-  m_Size: {x: 2, y: 2.5, z: .00999999978}
 --- !u!111 &28032082
 Animation:
   m_ObjectHideFlags: 0
@@ -2847,7 +2836,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 7.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &330266605
 Transform:
@@ -6133,7 +6122,6 @@ GameObject:
   - 4: {fileID: 1208788793}
   - 65: {fileID: 1208788801}
   - 111: {fileID: 1208788800}
-  - 41: {fileID: 1208788799}
   - 82: {fileID: 1208788798}
   - 114: {fileID: 1208788795}
   - 114: {fileID: 1208788797}
@@ -6296,16 +6284,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!41 &1208788799
-OcclusionPortal:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4100000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 2137000934}
-  m_GameObject: {fileID: 1208788790}
-  m_Open: 1
-  m_Center: {x: 0, y: 1.25, z: 0}
-  m_Size: {x: 2, y: 2.5, z: .00999999978}
 --- !u!111 &1208788800
 Animation:
   m_ObjectHideFlags: 0
@@ -9030,7 +9008,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 1, z: 2.5}
-  m_Center: {x: 0, y: .5, z: 1.25}
+  m_Center: {x: 0, y: 0, z: 1.25}
 --- !u!23 &1804707914
 Renderer:
   m_ObjectHideFlags: 0
@@ -10539,7 +10517,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f36a04fae5689b4796beb63bec2ae0a, type: 3}
   m_Name: 
-  efficiency: .966666639
+  efficiency: .977777779
 --- !u!114 &2115437273
 MonoBehaviour:
   m_ObjectHideFlags: 0

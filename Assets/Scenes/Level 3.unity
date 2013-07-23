@@ -23,10 +23,10 @@ SceneSettings:
   - {fileID: 1064442367}
   - {fileID: 792347135}
   m_PVSPortalsArray:
-  - {fileID: 642030902}
-  - {fileID: 903124842}
-  - {fileID: 478586350}
-  - {fileID: 1560172907}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_OcclusionBakeSettings:
     viewCellSize: 1.5
     bakeMode: 2
@@ -834,7 +834,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 7.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &208454464
 GameObject:
@@ -2574,7 +2574,6 @@ GameObject:
   - 4: {fileID: 478586342}
   - 65: {fileID: 478586352}
   - 111: {fileID: 478586351}
-  - 41: {fileID: 478586350}
   - 82: {fileID: 478586349}
   - 114: {fileID: 478586348}
   - 114: {fileID: 478586347}
@@ -2737,16 +2736,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!41 &478586350
-OcclusionPortal:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4100000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 862410410}
-  m_GameObject: {fileID: 478586341}
-  m_Open: 1
-  m_Center: {x: 0, y: 1.25, z: 0}
-  m_Size: {x: 2, y: 2.5, z: .00999999978}
 --- !u!111 &478586351
 Animation:
   m_ObjectHideFlags: 0
@@ -3970,7 +3959,6 @@ GameObject:
   - 4: {fileID: 642030894}
   - 65: {fileID: 642030904}
   - 111: {fileID: 642030903}
-  - 41: {fileID: 642030902}
   - 82: {fileID: 642030901}
   - 114: {fileID: 642030896}
   - 114: {fileID: 642030900}
@@ -4133,16 +4121,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!41 &642030902
-OcclusionPortal:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4100000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 2127453823}
-  m_GameObject: {fileID: 642030893}
-  m_Open: 1
-  m_Center: {x: 0, y: 1.25, z: 0}
-  m_Size: {x: 2, y: 2.5, z: .00999999978}
 --- !u!111 &642030903
 Animation:
   m_ObjectHideFlags: 0
@@ -5724,7 +5702,6 @@ GameObject:
   - 4: {fileID: 903124835}
   - 65: {fileID: 903124844}
   - 111: {fileID: 903124843}
-  - 41: {fileID: 903124842}
   - 82: {fileID: 903124841}
   - 114: {fileID: 903124837}
   - 114: {fileID: 903124840}
@@ -5887,16 +5864,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!41 &903124842
-OcclusionPortal:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4100000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 492322697}
-  m_GameObject: {fileID: 903124833}
-  m_Open: 1
-  m_Center: {x: 0, y: 1.25, z: 0}
-  m_Size: {x: 2, y: 2.5, z: .00999999978}
 --- !u!111 &903124843
 Animation:
   m_ObjectHideFlags: 0
@@ -8051,7 +8018,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f36a04fae5689b4796beb63bec2ae0a, type: 3}
   m_Name: 
-  efficiency: .966666639
+  efficiency: .977777779
 --- !u!114 &1309354565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9293,7 +9260,6 @@ GameObject:
   - 4: {fileID: 1560172900}
   - 65: {fileID: 1560172909}
   - 111: {fileID: 1560172908}
-  - 41: {fileID: 1560172907}
   - 82: {fileID: 1560172906}
   - 114: {fileID: 1560172902}
   - 114: {fileID: 1560172905}
@@ -9456,16 +9422,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!41 &1560172907
-OcclusionPortal:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4100000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 1850615856}
-  m_GameObject: {fileID: 1560172898}
-  m_Open: 1
-  m_Center: {x: 0, y: 1.25, z: 0}
-  m_Size: {x: 2, y: 2.5, z: .00999999978}
 --- !u!111 &1560172908
 Animation:
   m_ObjectHideFlags: 0

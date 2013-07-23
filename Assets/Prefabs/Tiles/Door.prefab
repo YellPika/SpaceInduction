@@ -137,7 +137,6 @@ GameObject:
   - 4: {fileID: 400014}
   - 65: {fileID: 6500000}
   - 111: {fileID: 11100000}
-  - 41: {fileID: 4100000}
   - 82: {fileID: 8200000}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400004}
@@ -490,15 +489,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_Mesh: {fileID: 4300000, guid: ceea5d5d13efc6245a58d5f460e78ea5, type: 3}
---- !u!41 &4100000
-OcclusionPortal:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_Open: 1
-  m_Center: {x: 0, y: 1.25, z: 0}
-  m_Size: {x: 2, y: 2.5, z: .00999999978}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -906,7 +896,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4a5ae3f31657e44a8c3ae5f50eb1a80, type: 3}
   m_Name: 
-  efficiency: 1
+  power: 1
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
