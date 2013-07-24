@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(PowerProperty))]
 [RequireComponent(typeof(RespawnPointInventory))]
 [RequireComponent(typeof(LevelInventory))]
+[RequireComponent(typeof(BoxMover))]
 public sealed class PlayerBehaviour : MonoBehaviour
 {
     private PlayerWheelBehaviour wheel;
@@ -12,6 +13,7 @@ public sealed class PlayerBehaviour : MonoBehaviour
     private PowerProperty power;
     private RespawnPointInventory respawnPoint;
     private LevelInventory level;
+    private BoxMover mover;
 
     private void Awake()
     {
@@ -22,6 +24,7 @@ public sealed class PlayerBehaviour : MonoBehaviour
         power = GetComponent<PowerProperty>();
         respawnPoint = GetComponent<RespawnPointInventory>();
         level = GetComponent<LevelInventory>();
+        mover = GetComponent<BoxMover>();
 
         power.Changed += (sender, e) =>
             {
@@ -49,7 +52,9 @@ public sealed class PlayerBehaviour : MonoBehaviour
 
     private void Update()
     {
-        transform.rotation = Quaternion.Euler(0, -wheel.TurnAmount, 0);
-        transform.position = wheel.transform.position + offset;
+        transform.rigidbody.MoveRotation(Quaternion.Euler(0, -wheel.TurnAmount, 0));
+        transform.rigidbody.MovePosition(wheel.transform.position + offset);
+
+        mover.IsActivated = Input.GetKey(KeyCode.Space);
     }
 }

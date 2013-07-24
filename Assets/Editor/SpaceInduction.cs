@@ -1,3 +1,5 @@
+using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -29,6 +31,28 @@ public static class SpaceInduction
 
         door.transform.Translate(0, 0, 2);
         closeTrigger.transform.Translate(0, 0, 2);
+    }
+
+    [MenuItem("Space Induction/Generate Level Prefab")]
+    public static void GenerateLevelPrefab()
+    {
+        var sceneName = EditorApplication.currentScene;
+        sceneName = Path.GetFileNameWithoutExtension(sceneName);
+
+        var level = GameObject.Find(sceneName);
+        if (level == null)
+        {
+            EditorUtility.DisplayDialog("Generate Level Prefab", "There is no game object named '" + sceneName + "'.", "OK");
+            return;
+        }
+
+        var path = "Assets/Prefabs/Levels/" + level.name + ".prefab";
+
+        var existing = AssetDatabase.LoadAssetAtPath(path, typeof(GameObject));
+        if (existing == null)
+            existing = PrefabUtility.CreateEmptyPrefab(path);
+        
+        PrefabUtility.ReplacePrefab(level, existing, ReplacePrefabOptions.ReplaceNameBased);
     }
 
     private static GameObject LoadPrefab(string name)
