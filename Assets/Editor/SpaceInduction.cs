@@ -9,28 +9,62 @@ public static class SpaceInduction
     public static void CreateLevel()
     {
         var level = LoadPrefab("Levels/Level");
-        var number = LoadPrefab("Levels/Number");
-        var hall = LoadPrefab("Tiles/Hall");
-        var door = LoadPrefab("Tiles/Door");
-        var openTrigger = LoadPrefab("Triggers/Open Door Trigger");
-        var closeTrigger = LoadPrefab("Triggers/Pass Through Door Trigger");
-        var respawnPoint = LoadPrefab("Items/Respawn Point");
 
+        CreateEntrance(level);
+        CreateExit(level);
+
+        var map = new GameObject("Map");
+        map.transform.parent = level.transform;
+
+        var rods = new GameObject("Rods");
+        rods.transform.parent = level.transform;
+    }
+
+    private static void CreateEntrance(GameObject level)
+    {
         var entrance = new GameObject("Entrance");
         entrance.transform.parent = level.transform;
 
+        var number = LoadPrefab("Levels/Number");
         number.transform.parent = entrance.transform;
-        hall.transform.parent = entrance.transform;
-        door.transform.parent = entrance.transform;
-        openTrigger.transform.parent = entrance.transform;
-        closeTrigger.transform.parent = entrance.transform;
-        respawnPoint.transform.parent = entrance.transform;
 
+        var hall = LoadPrefab("Tiles/Hall");
+        hall.transform.parent = entrance.transform;
+        hall.AddComponent<SelfPowerSource>();
+        hall.GetComponent<ColorProperty>().Value = Color.blue;
+
+        var door = LoadPrefab("Tiles/Door");
+        door.transform.parent = entrance.transform;
+        door.transform.Translate(0, 0, 2);
+        door.GetComponent<ColorProperty>().Value = Color.blue;
+
+        var openTrigger = LoadPrefab("Triggers/Open Door Trigger");
+        openTrigger.transform.parent = entrance.transform;
         openTrigger.GetComponent<OpenDoorTrigger>().Target = door.GetComponent<DoorBehaviour>();
+
+        var closeTrigger = LoadPrefab("Triggers/Pass Through Door Trigger");
+        closeTrigger.transform.parent = entrance.transform;
+        closeTrigger.transform.Translate(0, 0, 2);
         closeTrigger.GetComponent<PassThroughDoorTrigger>().Target = door.GetComponent<DoorBehaviour>();
 
+        var respawnPoint = LoadPrefab("Items/Respawn Point");
+        respawnPoint.transform.parent = entrance.transform;
+    }
+
+    private static void CreateExit(GameObject level)
+    {
+        var exit = new GameObject("Exit");
+        exit.transform.parent = level.transform;
+
+        var door = LoadPrefab("Tiles/Door");
+        door.transform.parent = exit.transform;
         door.transform.Translate(0, 0, 2);
+        door.GetComponent<ColorProperty>().Value = Color.blue;
+
+        var closeTrigger = LoadPrefab("Triggers/Pass Through Door Trigger");
+        closeTrigger.transform.parent = exit.transform;
         closeTrigger.transform.Translate(0, 0, 2);
+        closeTrigger.GetComponent<PassThroughDoorTrigger>().Target = door.GetComponent<DoorBehaviour>();
     }
 
     [MenuItem("Space Induction/Generate Level Prefab")]

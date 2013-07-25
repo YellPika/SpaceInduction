@@ -17,7 +17,10 @@ public sealed class DoorBehaviour : MonoBehaviour
     private void Awake()
     {
         initiallyOpen = open;
-        
+    }
+
+    private void Start()
+    {
         if (open)
             animation.Play("Door.Open");
     }
@@ -40,9 +43,6 @@ public sealed class DoorBehaviour : MonoBehaviour
 
         open = true;
 
-        if (Opened != null)
-            Opened(this, EventArgs.Empty);
-
         return true;
     }
 
@@ -56,9 +56,18 @@ public sealed class DoorBehaviour : MonoBehaviour
 
         open = false;
 
+        return true;
+    }
+
+    private void FireOpened()
+    {
+        if (Opened != null)
+            Opened(this, EventArgs.Empty);
+    }
+
+    private void FireClosed()
+    {
         if (Closed != null)
             Closed(this, EventArgs.Empty);
-
-        return true;
     }
 }
