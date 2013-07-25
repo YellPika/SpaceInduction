@@ -885,7 +885,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 1, g: 1, b: 1, a: 1}
+  value: {r: 0, g: 0, b: 1, a: 1}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -16,8 +16,6 @@ public sealed class ElevatorBehaviour : MonoBehaviour
     {
         initialState = state;
 
-        animation.Play("Elevator." + state);
-
         GetComponentInChildren<ElevatorEnterTrigger>().Triggered +=
             (sender, e) =>
             {
@@ -39,6 +37,11 @@ public sealed class ElevatorBehaviour : MonoBehaviour
             {
                 isFull = false;
             };
+    }
+
+    private void OnEnable()
+    {
+        animation.Play("Elevator." + state);
     }
 
     private void Restart()
