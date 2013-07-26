@@ -7,7 +7,6 @@ public sealed class AlienPowerSource : PowerSource
     [SerializeField]
     private float power = 0.75f;
     private List<PowerProperty> targets = new List<PowerProperty>();
-
     private void OnTriggerEnter(Collider collider)
     {
         var property = collider.GetComponent<PowerProperty>();

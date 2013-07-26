@@ -13,4 +13,5 @@ public sealed class OpenDoorTrigger : MonoBehaviour
         if (collider.GetComponent<DoorOpener>() != null)
             target.Open();
     }
+	
 }
