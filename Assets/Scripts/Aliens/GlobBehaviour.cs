@@ -4,12 +4,19 @@ public sealed class GlobBehaviour : MonoBehaviour
 {
     [SerializeField]
     private GlobWaypoint[] targets;
+
     private int currentTarget;
     private NavMeshAgent agent;
+
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
     }
 
     private void Start()
@@ -19,6 +26,14 @@ public sealed class GlobBehaviour : MonoBehaviour
 
         currentTarget = 0;
         agent.SetDestination(targets[currentTarget].transform.position);
+    }
+
+    private void Restart()
+    {
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+
+        Start();
     }
 
     private void Update()

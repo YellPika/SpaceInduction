@@ -10,6 +10,12 @@ public sealed class PassThroughDoorTrigger : MonoBehaviour
     // Kinda abstract. Don't mess with it.
     private int state;
 
+    public DoorBehaviour Target
+    {
+        get { return target; }
+        set { target = value; }
+    }
+
     private void Awake()
     {
         object first = null;
