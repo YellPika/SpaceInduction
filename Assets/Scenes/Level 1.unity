@@ -3450,9 +3450,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 528802160}
   - {fileID: 936789897}
   - {fileID: 745636541}
-  - {fileID: 528802160}
   - {fileID: 1294641128}
   - {fileID: 659891111}
   - {fileID: 513651317}
@@ -6137,6 +6137,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe741906e3003a44a0f473b0a22a403, type: 3}
   m_Name: 
+  timeLimit: 30
 --- !u!65 &1535892138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6583,6 +6584,10 @@ Prefab:
     - target: {fileID: 100000, guid: 4a5c0c6541cdfcf40ae9d00fb2caabc5, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4a5c0c6541cdfcf40ae9d00fb2caabc5, type: 2}
+      propertyPath: timeLimit
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a5c0c6541cdfcf40ae9d00fb2caabc5, type: 2}

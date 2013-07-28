@@ -2,6 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Renderer))]
 public sealed class MovableBox : MonoBehaviour
 {
     private Vector3 startPosition;
@@ -20,7 +21,7 @@ public sealed class MovableBox : MonoBehaviour
     private void OnTriggerStay(Collider collider)
     {
         var mover = collider.GetComponent<BoxMover>();
-        if (mover == null)
+        if (mover == null || !renderer.isVisible)
             return;
 
         rigidbody.mass = mover.IsActivated ? 0.1f : 10;

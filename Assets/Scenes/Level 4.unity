@@ -1359,7 +1359,7 @@ Transform:
   - {fileID: 1971659910}
   - {fileID: 303250329}
   - {fileID: 684941994}
-  m_Father: {fileID: 1213336674}
+  m_Father: {fileID: 334117751}
 --- !u!114 &142926328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3039,6 +3039,7 @@ Transform:
   - {fileID: 528767477}
   - {fileID: 2037509219}
   - {fileID: 203119346}
+  - {fileID: 142926327}
   - {fileID: 1100998952}
   - {fileID: 1196008530}
   - {fileID: 141972420}
@@ -7647,6 +7648,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe741906e3003a44a0f473b0a22a403, type: 3}
   m_Name: 
+  timeLimit: 45
 --- !u!65 &994646535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8746,6 +8748,10 @@ Prefab:
       propertyPath: m_Name
       value: Level 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4a5c0c6541cdfcf40ae9d00fb2caabc5, type: 2}
+      propertyPath: timeLimit
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a5c0c6541cdfcf40ae9d00fb2caabc5, type: 2}
   m_RootGameObject: {fileID: 994646533}
@@ -9526,7 +9532,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 889992624}
-  - {fileID: 142926327}
   - {fileID: 415077587}
   m_Father: {fileID: 994646536}
 --- !u!1 &1231024109
@@ -10500,7 +10505,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1213336674}
+    m_TransformParent: {fileID: 334117751}
     m_Modifications:
     - target: {fileID: 11400032, guid: 4e62c3570b5d5414c8a0d99fcd213c41, type: 2}
       propertyPath: targets.Array.size

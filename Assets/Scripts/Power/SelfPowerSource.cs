@@ -7,6 +7,12 @@ public sealed class SelfPowerSource : PowerSource
     private float efficiency = 1;
     private PowerProperty power;
 
+    public float Efficiency
+    {
+        get { return efficiency; }
+        set { efficiency = value; }
+    }
+
     private void Awake()
     {
         power = GetComponent<PowerProperty>();
