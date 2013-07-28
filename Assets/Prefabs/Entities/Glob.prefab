@@ -422,7 +422,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
   m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
   m_CullingMode: 1
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_AnimatePhysics: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -435,6 +435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
   targets: []
+  speed: .25
+  turnSpeed: 15
+  tolerance: .100000001
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

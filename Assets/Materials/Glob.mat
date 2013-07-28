@@ -44,11 +44,11 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .078125
+        second: .0610878989
       data:
         first:
           name: _Intensity
-        second: 10
+        second: 1.73076916
       data:
         first:
           name: _EmissionLM
