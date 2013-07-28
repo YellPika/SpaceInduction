@@ -2751,7 +2751,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 337810345}
-  - 114: {fileID: 337810346}
   m_Layer: 0
   m_Name: Glob Waypoint
   m_TagString: Untagged
@@ -2770,18 +2769,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1525880406}
---- !u!114 &337810346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 5eb89279cfe426a40bc904504d5c8d0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1801549555}
-  m_GameObject: {fileID: 337810344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164fc3d53060acb45b6aeb608f197341, type: 3}
-  m_Name: 
-  tolerance: .5
 --- !u!1 &347297872
 GameObject:
   m_ObjectHideFlags: 0
@@ -3844,7 +3831,7 @@ MonoBehaviour:
   exposureAdjustment: 1.5
   middleGrey: .0500000007
   white: .200000003
-  adaptionSpeed: 1.5
+  adaptionSpeed: .800000012
   tonemapper: {fileID: 4800000, guid: 003377fc2620a44939dadde6fe3f8190, type: 3}
   validRenderTextureFormat: 1
 --- !u!114 &514451514
@@ -4806,7 +4793,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 642058255}
-  - 114: {fileID: 642058256}
   m_Layer: 0
   m_Name: Glob Waypoint
   m_TagString: Untagged
@@ -4825,18 +4811,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1525880406}
---- !u!114 &642058256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 5eb89279cfe426a40bc904504d5c8d0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1536229708}
-  m_GameObject: {fileID: 642058254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164fc3d53060acb45b6aeb608f197341, type: 3}
-  m_Name: 
-  tolerance: .5
 --- !u!1 &649356344
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,7 +6952,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1011328584}
-  - 114: {fileID: 1011328585}
   m_Layer: 0
   m_Name: Glob Waypoint
   m_TagString: Untagged
@@ -6997,18 +6970,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1525880406}
---- !u!114 &1011328585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 5eb89279cfe426a40bc904504d5c8d0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 25122558}
-  m_GameObject: {fileID: 1011328583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164fc3d53060acb45b6aeb608f197341, type: 3}
-  m_Name: 
-  tolerance: .5
 --- !u!1 &1012831801
 GameObject:
   m_ObjectHideFlags: 0
@@ -9841,7 +9802,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1461151999}
-  - 114: {fileID: 1461152000}
   m_Layer: 0
   m_Name: Glob Waypoint
   m_TagString: Untagged
@@ -9860,18 +9820,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1525880406}
---- !u!114 &1461152000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 5eb89279cfe426a40bc904504d5c8d0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 884598160}
-  m_GameObject: {fileID: 1461151998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164fc3d53060acb45b6aeb608f197341, type: 3}
-  m_Name: 
-  tolerance: .5
 --- !u!1 &1465889590
 GameObject:
   m_ObjectHideFlags: 0
