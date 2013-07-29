@@ -3457,6 +3457,7 @@ Transform:
   - {fileID: 659891111}
   - {fileID: 513651317}
   - {fileID: 979696336}
+  - {fileID: 1483288273}
   m_Father: {fileID: 1535892136}
 --- !u!1 &836366805
 GameObject:
@@ -3956,7 +3957,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2041433682}
+    m_TransformParent: {fileID: 816477909}
     m_Modifications:
     - target: {fileID: 400002, guid: 44d67aed45bc05a48b64ea468f0bbf08, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5964,7 +5965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1378230676}
-  m_Father: {fileID: 2041433682}
+  m_Father: {fileID: 816477909}
 --- !u!65 &1483288274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8073,7 +8074,6 @@ Transform:
   m_Children:
   - {fileID: 223938938}
   - {fileID: 1101343194}
-  - {fileID: 1483288273}
   - {fileID: 1943436480}
   m_Father: {fileID: 1535892136}
 --- !u!1 &2060807565
