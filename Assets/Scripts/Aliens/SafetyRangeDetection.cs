@@ -10,20 +10,28 @@ public class SafetyRangeDetection : MonoBehaviour {
 	public float safe_y;
 	public float safe_z;
 	public float safeCheck = 1;
-	
+	public float passedThrough = 1;
 	void Start (){
 		safeCheck = 1;
 		
 	}
 	
 	public void OnTriggerEnter(Collider other){
-		safeCheck = 1;
-		Debug.Log ("You are safe");
+		if (other.tag == "Player")
+		{
+			safeCheck = 1;
+			Debug.Log ("You are safe");
+			passedThrough = 2;
+		}
 	
 	}
 	public void OnTriggerExit (Collider other){
-		safeCheck = 2;
-		Debug.Log ("You are in danger");
+		if (other.tag == "Player" && passedThrough != 1)
+		{
+			safeCheck = 2;
+			Debug.Log ("You are in danger");
+			passedThrough = 1;
+		}
 	}
 	
 	
