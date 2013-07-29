@@ -55,7 +55,7 @@ public sealed class GlobBehaviour : MonoBehaviour
 
     private IEnumerator<Vector3> TravelPath()
     {
-        var currentTarget = 0;
+        var currentTarget = -1;
         var path = new NavMeshPath();
         var corners = new Queue<Vector3>();
 

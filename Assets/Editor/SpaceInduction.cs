@@ -32,6 +32,7 @@ public static class SpaceInduction
         hall.transform.parent = entrance.transform;
         hall.AddComponent<SelfPowerSource>();
         hall.GetComponent<ColorProperty>().Value = Color.blue;
+        hall.GetComponent<ColliderPowerSource>().enabled = true;
 
         var door = LoadPrefab("Tiles/Door");
         door.transform.parent = entrance.transform;
