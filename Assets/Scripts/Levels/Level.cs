@@ -3,6 +3,11 @@ using UnityEngine;
 
 public sealed class Level : MonoBehaviour
 {
+    [SerializeField]
+    private float timeLimit = 60;
+
+    public float TimeLimit { get { return timeLimit; } }
+
     private void Start()
     {
         var entrance = transform.Find("Entrance").GetComponentInChildren<DoorBehaviour>();
