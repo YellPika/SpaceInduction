@@ -59,12 +59,12 @@ public static class SpaceInduction
 
         var door = LoadPrefab("Tiles/Door");
         door.transform.parent = exit.transform;
-        door.transform.Translate(0, 0, 2);
+        door.transform.Translate(2, 0, 2);
         door.GetComponent<ColorProperty>().Value = Color.blue;
 
         var closeTrigger = LoadPrefab("Triggers/Pass Through Door Trigger");
         closeTrigger.transform.parent = exit.transform;
-        closeTrigger.transform.Translate(0, 0, 2);
+        closeTrigger.transform.Translate(2, 0, 2);
         closeTrigger.GetComponent<PassThroughDoorTrigger>().Target = door.GetComponent<DoorBehaviour>();
     }
 
