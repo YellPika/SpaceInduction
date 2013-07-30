@@ -2729,7 +2729,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f36a04fae5689b4796beb63bec2ae0a, type: 3}
   m_Name: 
-  efficiency: .983333349
+  efficiency: 1
 --- !u!114 &306593258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2741,7 +2741,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
-  value: .00999999978
+  value: 5
 --- !u!114 &306593259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6948,7 +6948,7 @@ GameObject:
   - 4: {fileID: 802458114}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15767,6 +15767,7 @@ GameObject:
   - 114: {fileID: 2065803193}
   - 114: {fileID: 2065803192}
   - 114: {fileID: 2065803191}
+  - 114: {fileID: 2065803203}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -16017,7 +16018,7 @@ AudioSource:
   m_GameObject: {fileID: 2065803189}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 9a1aaaa28650a8244bcadf5bb385ac7a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 519e968bb56be234396175b23551a750, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .100000001
   m_Pitch: 1
@@ -16158,6 +16159,18 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 1
+--- !u!114 &2065803203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 7919386f45dd23e469384890f62b273d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1263134264}
+  m_GameObject: {fileID: 2065803189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a990c582f7c1bde428367e81b899f0eb, type: 3}
+  m_Name: 
+  safeAreaLevel1: {fileID: 0}
 --- !u!1 &2067796982
 GameObject:
   m_ObjectHideFlags: 0
