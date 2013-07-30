@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9826440574e19a64f91dee42a4e26e85, type: 3}
   m_Name: 
-  positionOfPlayer: {fileID: 1038074306}
+  positionOfObject: {fileID: 0}
   closeDistance: 12.3299999
 --- !u!1001 &7048826
 Prefab:
@@ -18120,7 +18120,7 @@ Prefab:
       propertyPath: current
       value: 
       objectReference: {fileID: 1930946142}
-    - target: {fileID: 11400008, guid: 7919386f45dd23e469384890f62b273d, type: 2}
+    - target: {fileID: 0}
       propertyPath: safeAreaLevel1
       value: 
       objectReference: {fileID: 1155341030}
@@ -18571,7 +18571,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
-  value: 5
+  value: .00999999978
 --- !u!114 &387512445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51738,11 +51738,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc1fc63e7ffb9194d8e0ea3f86ad2798, type: 3}
   m_Name: 
-  m_player: {fileID: 1038074306}
   safe_x: 0
   safe_y: 0
   safe_z: 0
   safeCheck: 1
+  passedThrough: 1
 --- !u!65 &1155341033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89090,7 +89090,6 @@ GameObject:
   - 114: {fileID: 1841798987}
   - 114: {fileID: 1929929792}
   - 114: {fileID: 1929929791}
-  - 114: {fileID: 1929929801}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -89351,18 +89350,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 1
---- !u!114 &1929929801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 7919386f45dd23e469384890f62b273d,
-    type: 2}
-  m_PrefabInternal: {fileID: 377230706}
-  m_GameObject: {fileID: 1929929788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a990c582f7c1bde428367e81b899f0eb, type: 3}
-  m_Name: 
-  safeAreaLevel1: {fileID: 1155341030}
 --- !u!82 &1929929802
 AudioSource:
   m_ObjectHideFlags: 0
