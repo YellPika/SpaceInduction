@@ -14,6 +14,8 @@ public class PlayerEditor : MonoBehaviour {
 	
 	private void OnGUI()
 	{
+	
+		
 	if (message != "" && !register)
             GUILayout.Box(message);
 
@@ -44,20 +46,20 @@ public class PlayerEditor : MonoBehaviour {
 	
 	if (register)
 		{
+			message = "Choose your Level now";
 			GUILayout.Box (message);
 			GUILayout.Label ("Levels: ");
 			GUILayout.BeginHorizontal();
 			for (int i = 1; i < 10; i ++)
 			{
-				Debug.Log (level + " " + i.ToString());
-				PlayerPrefs.SetString(level, level + " " + i.ToString());
 				
 				
-				Debug.Log (PlayerPrefs.GetString (level));
+			
 				if (GUILayout.Button(level + " " + i.ToString()))
             	{
 					PlayerPrefs.SetString ("levelChoice", level + " " + i.ToString());
-					Application.LoadLevel ("Game");
+					
+					//Application.LoadLevel ("Game");
 				}
 					
 			}

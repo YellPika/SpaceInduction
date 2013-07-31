@@ -9,11 +9,12 @@ public sealed class RespawnPointInventory : MonoBehaviour
 	
 	
 	
-	void Start (){
+	//void Start ()
+	//{
 	
-	RespawnPoint newCurrent = GameObject.Find ("/" + PlayerPrefs.GetString ("levelChoice") + "/Entrance/Respawn Point");
-
-	}
+	//RespawnPoint newCurrent = GameObject.Find ("/" + PlayerPrefs.GetString ("levelChoice") + "/Entrance/Respawn Point");
+	
+	//}
     public RespawnPoint Current
     {
     	
