@@ -50,14 +50,18 @@ public class PlayerEditor : MonoBehaviour {
 			for (int i = 1; i < 10; i ++)
 			{
 				Debug.Log (level + " " + i.ToString());
+				PlayerPrefs.SetString(level, level + " " + i.ToString());
 				
+				
+				Debug.Log (PlayerPrefs.GetString (level));
 				if (GUILayout.Button(level + " " + i.ToString()))
             	{
+					PlayerPrefs.SetString ("levelChoice", level + " " + i.ToString());
 					Application.LoadLevel ("Game");
 				}
 					
 			}
-				
+			GUILayout.EndHorizontal();
 			
 			
 		}

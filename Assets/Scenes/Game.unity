@@ -17087,9 +17087,10 @@ GameObject:
   - 114: {fileID: 309138611}
   - 114: {fileID: 309138610}
   - 114: {fileID: 309138619}
+  - 114: {fileID: 309138620}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17239,6 +17240,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1c774bf60ec2bf45b73aad6b593c12b, type: 3}
+  m_Name: 
+--- !u!114 &309138620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309138607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ff8635f26d4504c89ca4a27a657677, type: 3}
   m_Name: 
 --- !u!1 &309901846
 GameObject:
@@ -96834,6 +96845,10 @@ Prefab:
     - target: {fileID: 400002, guid: 7919386f45dd23e469384890f62b273d, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 7919386f45dd23e469384890f62b273d, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7919386f45dd23e469384890f62b273d, type: 2}
