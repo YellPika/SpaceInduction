@@ -13,3 +13,5 @@
 *.pidb
 *.sql
 *.sqlite
+
+Thumbs.db
