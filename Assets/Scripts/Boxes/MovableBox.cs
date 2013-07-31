@@ -26,10 +26,11 @@ public sealed class MovableBox : MonoBehaviour
 
         rigidbody.mass = mover.IsActivated ? 0.1f : 10;
         collider.material = mover.IsActivated ? smoothMaterial : roughMaterial;
-
+		
         if (mover.IsActivated)
         {
-            var offset = mover.transform.position - transform.position;
+            audio.Play ();
+			var offset = mover.transform.position - transform.position;
 
             if (Mathf.Abs(offset.x) > Mathf.Abs(offset.z))
             {
@@ -45,6 +46,10 @@ public sealed class MovableBox : MonoBehaviour
             // to prevent the box from moving slower than the player.
             rigidbody.velocity *= 1.25f;
         }
+		else
+		{
+			audio.Stop();
+		}
     }
 
     private void Restart()

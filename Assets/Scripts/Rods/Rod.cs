@@ -8,11 +8,12 @@ public sealed class Rod : MonoBehaviour
         var inventory = sender.GetComponent<RodInventory>();
         if (inventory == null)
             return;
-
+		
         renderer.enabled = false;
         collider.enabled = false;
 
         inventory.Items.Add(this);
+		audio.Play();
     }
 
     private void Restart()
