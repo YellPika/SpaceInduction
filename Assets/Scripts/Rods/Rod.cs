@@ -9,15 +9,13 @@ public sealed class Rod : MonoBehaviour
         if (inventory == null)
             return;
 
-        renderer.enabled = false;
-        collider.enabled = false;
+        gameObject.SetActive(false);
 
         inventory.Items.Add(this);
     }
 
     private void Restart()
     {
-        renderer.enabled = true;
-        collider.enabled = true;
+        gameObject.SetActive(true);
     }
 }

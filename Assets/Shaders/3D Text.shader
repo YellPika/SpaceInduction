@@ -10,7 +10,7 @@ Shader "GUI/3D Text" {
 	   Blend SrcAlpha OneMinusSrcAlpha 
 	   Pass { 
 		  Color [_Color] 
-		  SetTexture [_MainTex] { 
+		  SetTexture [_MainTex] {
 			 combine primary, texture * primary 
 		  } 
 	   } 
