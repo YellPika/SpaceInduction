@@ -29,7 +29,6 @@ public sealed class MovableBox : MonoBehaviour
 		
         if (mover.IsActivated)
         {
-            audio.Play ();
 			var offset = mover.transform.position - transform.position;
 
             if (Mathf.Abs(offset.x) > Mathf.Abs(offset.z))
@@ -46,10 +45,6 @@ public sealed class MovableBox : MonoBehaviour
             // to prevent the box from moving slower than the player.
             rigidbody.velocity *= 1.25f;
         }
-		else
-		{
-			audio.Stop();
-		}
     }
 
     private void Restart()
