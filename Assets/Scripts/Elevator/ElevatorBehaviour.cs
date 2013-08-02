@@ -30,7 +30,6 @@ public sealed class ElevatorBehaviour : MonoBehaviour
                     : ElevatorState.Down;
 
                 animation.Play("Elevator." + state);
-				audio.Play ();
             };
 
         GetComponentInChildren<ElevatorExitTrigger>().Triggered +=
@@ -43,7 +42,6 @@ public sealed class ElevatorBehaviour : MonoBehaviour
     private void OnEnable()
     {
         animation.Play("Elevator." + state);
-		
     }
 
     private void Restart()
