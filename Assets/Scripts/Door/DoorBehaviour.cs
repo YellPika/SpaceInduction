@@ -25,6 +25,11 @@ public sealed class DoorBehaviour : MonoBehaviour
             animation.Play("Door.Open");
     }
 
+    private void Update()
+    {
+        audio.pitch = Time.timeScale;
+    }
+
     private void Restart()
     {
         if (initiallyOpen)

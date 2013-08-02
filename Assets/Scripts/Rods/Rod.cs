@@ -9,12 +9,21 @@ public sealed class Rod : MonoBehaviour
         if (inventory == null)
             return;
 
-        gameObject.SetActive(false);
+        renderer.enabled = false;
+        collider.enabled = false;
+        foreach (Transform child in transform)
+            child.gameObject.SetActive(false);
+
         inventory.Items.Add(this);
     }
 
     private void Restart()
     {
-        gameObject.SetActive(true);
+        // Restart message won't be sent if we just gameObject.SetActive(false);
+        // Have to do it the long way instead.
+        renderer.enabled = true;
+        collider.enabled = true;
+        foreach (Transform child in transform)
+            child.gameObject.SetActive(true);
     }
 }

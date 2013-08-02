@@ -6,7 +6,11 @@ public sealed class Level : MonoBehaviour
     [SerializeField]
     private float timeLimit = 60;
 
+    [SerializeField]
+    private int number;
+
     public float TimeLimit { get { return timeLimit; } }
+    public int Number { get { return number; } }
 
     private void Start()
     {
@@ -20,14 +24,18 @@ public sealed class Level : MonoBehaviour
         entrance.Opened += (sender, e) =>
         {
             foreach (var child in transform.OfType<Transform>())
-                if (child.name != "Entrance")
+                if (child.name != "Entrance" && child.name != "Exit")
                     child.gameObject.SetActive(true);
         };
 
         exit.Closed += (sender, e) =>
         {
+            // Make sure that we're not just restarting the level.
+            if (entrance.IsOpen)
+                return;
+
             foreach (var child in transform.OfType<Transform>())
-                if (child.name != "Exit")
+                if (child.name != "Entrance" && child.name != "Exit")
                     child.gameObject.SetActive(false);
         };
     }
@@ -39,11 +47,15 @@ public sealed class Level : MonoBehaviour
             return;
 
         inventory.Current = this;
-        inventory.gameObject.transform.parent = transform;
     }
 
     public void Restart()
     {
+        // TODO: Get rid of the code duplication.
+        foreach (var child in transform.OfType<Transform>())
+            if (child.name != "Entrance" && child.name != "Exit")
+                child.gameObject.SetActive(false);
+
         foreach (var child in transform.OfType<Transform>())
             child.BroadcastMessage("Restart", SendMessageOptions.DontRequireReceiver);
     }

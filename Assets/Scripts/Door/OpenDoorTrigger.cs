@@ -14,9 +14,9 @@ public sealed class OpenDoorTrigger : MonoBehaviour
         set { target = value; }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerStay(Collider collider)
     {
-        if (collider.GetComponent<DoorOpener>() != null)
+        if (!target.IsOpen && collider.GetComponent<DoorOpener>() != null)
             target.Open();
     }
 	

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(PowerProperty))]
@@ -35,18 +36,7 @@ public sealed class PlayerBehaviour : MonoBehaviour
 
                 // DO NOT do this before/in Restart(), otherwise the player could reset before
                 // the rest of the level, resulting in some strange stuff.
-                var wheelOffset = wheel.transform.position - transform.position;
-                var bodyOffset = body.transform.position - transform.position;
-
-                transform.position = respawnPoint.Current.transform.position;
-
-                wheel.transform.position = transform.position + wheelOffset;
-                wheel.rigidbody.velocity = Vector3.zero;
-
-                body.transform.position = transform.position + bodyOffset;
-                body.rigidbody.velocity = Vector3.zero;
-
-                wheel.TurnAmount = -respawnPoint.Current.transform.rotation.eulerAngles.y;
+                Teleport(respawnPoint.transform.position, respawnPoint.transform.rotation);
             };
     }
 
@@ -56,5 +46,25 @@ public sealed class PlayerBehaviour : MonoBehaviour
         transform.rigidbody.MovePosition(wheel.transform.position + offset);
 
         mover.IsActivated = Input.GetKey(KeyCode.Space);
+    }
+
+    public void Teleport(Vector3 position, Quaternion rotation)
+    {
+        var wheelOffset = wheel.transform.position - transform.position;
+        var bodyOffset = body.transform.position - transform.position;
+
+        transform.position = position;
+
+        body.transform.position = transform.position + bodyOffset;
+        body.rigidbody.velocity = Vector3.zero;
+        body.rigidbody.angularVelocity = Vector3.zero;
+
+        wheel.transform.position = transform.position + wheelOffset;
+        wheel.TurnAmount = -rotation.eulerAngles.y;
+        wheel.rigidbody.velocity = Vector3.zero;
+        wheel.rigidbody.angularVelocity = Vector3.zero;
+
+        body.rigidbody.Sleep();
+        wheel.rigidbody.Sleep();
     }
 }
