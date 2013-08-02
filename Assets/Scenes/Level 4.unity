@@ -1775,7 +1775,6 @@ GameObject:
   - 114: {fileID: 203119350}
   - 114: {fileID: 203119349}
   - 114: {fileID: 203119348}
-  - 82: {fileID: 203119355}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Untagged
@@ -1910,63 +1909,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 8.5, z: 2.4000001}
   m_Center: {x: 0, y: 4.25, z: .200000003}
---- !u!82 &203119355
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: d8756e1200307dc4f9cd90e6fb4a8aa3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1646872799}
-  m_GameObject: {fileID: 203119345}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 5fdaa641298a8fe468b62743cfa3573c, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &209790526
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,7 +2549,6 @@ GameObject:
   - 23: {fileID: 287416360}
   - 65: {fileID: 287416359}
   - 114: {fileID: 287416358}
-  - 82: {fileID: 287416362}
   m_Layer: 0
   m_Name: Rod
   m_TagString: Untagged
@@ -2677,63 +2618,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 404524108}
   m_GameObject: {fileID: 287416356}
   m_Mesh: {fileID: 4300004, guid: 27bcbf67e69681c4184e58eff48a6fad, type: 3}
---- !u!82 &287416362
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: 44d67aed45bc05a48b64ea468f0bbf08,
-    type: 2}
-  m_PrefabInternal: {fileID: 404524108}
-  m_GameObject: {fileID: 287416356}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 3a507cbefd620a843b12caf2af2f92b3, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &303250328
 GameObject:
   m_ObjectHideFlags: 0
@@ -9142,10 +9026,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 51529054}
-  - {fileID: 727531932}
   - {fileID: 1678216647}
   - {fileID: 536908302}
+  - {fileID: 51529054}
+  - {fileID: 727531932}
   m_Father: {fileID: 994646536}
 --- !u!1 &1152269747
 GameObject:
@@ -11493,7 +11377,6 @@ GameObject:
   - 23: {fileID: 1496874329}
   - 65: {fileID: 1496874328}
   - 114: {fileID: 1496874327}
-  - 82: {fileID: 1496874331}
   m_Layer: 0
   m_Name: Rod
   m_TagString: Untagged
@@ -11563,63 +11446,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 355796733}
   m_GameObject: {fileID: 1496874325}
   m_Mesh: {fileID: 4300004, guid: 27bcbf67e69681c4184e58eff48a6fad, type: 3}
---- !u!82 &1496874331
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: 44d67aed45bc05a48b64ea468f0bbf08,
-    type: 2}
-  m_PrefabInternal: {fileID: 355796733}
-  m_GameObject: {fileID: 1496874325}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 3a507cbefd620a843b12caf2af2f92b3, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &1507287193
 GameObject:
   m_ObjectHideFlags: 0
@@ -11776,7 +11602,6 @@ GameObject:
   - 23: {fileID: 1543640241}
   - 65: {fileID: 1543640240}
   - 114: {fileID: 1543640239}
-  - 82: {fileID: 1543640243}
   m_Layer: 0
   m_Name: Rod
   m_TagString: Untagged
@@ -11846,63 +11671,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1231061448}
   m_GameObject: {fileID: 1543640237}
   m_Mesh: {fileID: 4300004, guid: 27bcbf67e69681c4184e58eff48a6fad, type: 3}
---- !u!82 &1543640243
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: 44d67aed45bc05a48b64ea468f0bbf08,
-    type: 2}
-  m_PrefabInternal: {fileID: 1231061448}
-  m_GameObject: {fileID: 1543640237}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 3a507cbefd620a843b12caf2af2f92b3, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &1573550978
 GameObject:
   m_ObjectHideFlags: 0
@@ -15193,7 +14961,6 @@ GameObject:
   - 23: {fileID: 2117394444}
   - 65: {fileID: 2117394443}
   - 114: {fileID: 2117394442}
-  - 82: {fileID: 2117394446}
   m_Layer: 0
   m_Name: Rod
   m_TagString: Untagged
@@ -15263,63 +15030,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1189356227}
   m_GameObject: {fileID: 2117394440}
   m_Mesh: {fileID: 4300004, guid: 27bcbf67e69681c4184e58eff48a6fad, type: 3}
---- !u!82 &2117394446
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: 44d67aed45bc05a48b64ea468f0bbf08,
-    type: 2}
-  m_PrefabInternal: {fileID: 1189356227}
-  m_GameObject: {fileID: 2117394440}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 3a507cbefd620a843b12caf2af2f92b3, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &2131361059
 GameObject:
   m_ObjectHideFlags: 0
