@@ -47,6 +47,6 @@ public sealed class ElevatorBehaviour : MonoBehaviour
     private void Restart()
     {
         state = initialState;
-        animation.Play("Elevator." + state);
+        gameObject.SampleAnimation(animation.GetClip("Elevator." + (state == ElevatorState.Down ? "Up" : "Down")), 0);
     }
 }

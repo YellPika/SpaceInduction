@@ -11,7 +11,7 @@ public sealed class ColliderPowerSource : PowerSource
     private void OnTriggerEnter(Collider collider)
     {
         var property = collider.GetComponent<PowerProperty>();
-        if (property != null)
+        if (property != null && !targets.Contains(property))
             targets.Add(property);
     }
 
@@ -24,17 +24,8 @@ public sealed class ColliderPowerSource : PowerSource
 
     private void Update()
     {
+        targets.RemoveAll(n => !n.gameObject.activeInHierarchy);
         foreach (var target in targets)
             target.Apply(power);
-    }
-
-    private void Restart()
-    {
-        // flush out targets
-        if (enabled)
-        {
-            enabled = false;
-            enabled = true;
-        }
     }
 }

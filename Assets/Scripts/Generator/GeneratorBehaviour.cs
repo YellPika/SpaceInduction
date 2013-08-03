@@ -38,6 +38,7 @@ public sealed class GeneratorBehaviour : MonoBehaviour
     private void Restart()
     {
         animation.Stop();
+        gameObject.SampleAnimation(animation.GetClip("Generator.Start"), 0);
 
         var setSource = GetComponent<SetPowerSource>();
         if (setSource != null)

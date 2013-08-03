@@ -50,7 +50,11 @@ public sealed class Level : MonoBehaviour
     private void SetVisibility(bool value)
     {
         foreach (var child in transform.OfType<Transform>())
-            if (child.name != "Entrance" && child.name != "Exit")
-                child.gameObject.SetActive(value);
+        {
+            if (child.name == "Entrance" || child.name == "Exit")
+                continue;
+
+            child.gameObject.SetActive(value);
+        }
     }
 }

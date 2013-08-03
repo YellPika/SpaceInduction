@@ -32,10 +32,8 @@ public sealed class DoorBehaviour : MonoBehaviour
 
     private void Restart()
     {
-        if (initiallyOpen)
-            Open();
-        else
-            Close();
+        open = initiallyOpen;
+        gameObject.SampleAnimation(animation.GetClip("Door." + (open ? "Close" : "Open")), 0);
     }
 
     public bool Open()
