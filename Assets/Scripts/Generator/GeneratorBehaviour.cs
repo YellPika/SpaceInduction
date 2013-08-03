@@ -7,17 +7,10 @@ public sealed class GeneratorBehaviour : MonoBehaviour
     [SerializeField]
     private PowerSource[] targets;
 
-    // For resetting purposes.
-    private bool[] initialValues;
-
     public event EventHandler Started;
 
     private void Awake()
     {
-        initialValues = targets
-            .Select(n => n.enabled)
-            .ToArray();
-
         var trigger = GetComponentInChildren<GeneratorTrigger>();
         trigger.Triggered += (sender, e) =>
         {
@@ -50,8 +43,8 @@ public sealed class GeneratorBehaviour : MonoBehaviour
         if (setSource != null)
             Destroy(setSource);
 
-        for (int i = 0; i < targets.Length; i++)
-            targets[i].enabled = initialValues[i];
+        foreach (var target in targets)
+            target.enabled = false;
     }
 
     private void Spin()

@@ -17,26 +17,14 @@ public sealed class Level : MonoBehaviour
         var entrance = transform.Find("Entrance").GetComponentInChildren<DoorBehaviour>();
         var exit = transform.Find("Exit").GetComponentInChildren<DoorBehaviour>();
 
-        foreach (var child in transform.OfType<Transform>())
-            if (child.name != "Entrance" && child.name != "Exit")
-                child.gameObject.SetActive(false);
+        SetVisibility(false);
 
-        entrance.Opened += (sender, e) =>
-        {
-            foreach (var child in transform.OfType<Transform>())
-                if (child.name != "Entrance" && child.name != "Exit")
-                    child.gameObject.SetActive(true);
-        };
-
+        entrance.Opened += (sender, e) => SetVisibility(true);
         exit.Closed += (sender, e) =>
         {
             // Make sure that we're not just restarting the level.
-            if (entrance.IsOpen)
-                return;
-
-            foreach (var child in transform.OfType<Transform>())
-                if (child.name != "Entrance" && child.name != "Exit")
-                    child.gameObject.SetActive(false);
+            if (!entrance.IsOpen)
+                SetVisibility(false);
         };
     }
 
@@ -51,12 +39,18 @@ public sealed class Level : MonoBehaviour
 
     public void Restart()
     {
+        SetVisibility(true);
+
         foreach (var child in transform.OfType<Transform>())
             child.BroadcastMessage("Restart", SendMessageOptions.DontRequireReceiver);
 
-        // TODO: Get rid of the code duplication.
+        SetVisibility(false);
+    }
+
+    private void SetVisibility(bool value)
+    {
         foreach (var child in transform.OfType<Transform>())
             if (child.name != "Entrance" && child.name != "Exit")
-                child.gameObject.SetActive(false);
+                child.gameObject.SetActive(value);
     }
 }

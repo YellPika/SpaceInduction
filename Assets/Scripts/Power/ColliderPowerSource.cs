@@ -27,4 +27,9 @@ public sealed class ColliderPowerSource : PowerSource
         foreach (var target in targets)
             target.Apply(power);
     }
+
+    private void Restart()
+    {
+        targets.Clear();
+    }
 }

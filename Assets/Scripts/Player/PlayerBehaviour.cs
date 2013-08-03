@@ -32,13 +32,12 @@ public sealed class PlayerBehaviour : MonoBehaviour
                 if (e.Value != 0 || level.Current == null)
                     return;
 
+                Teleport(
+                    respawnPoint.Current.transform.position,
+                    respawnPoint.Current.transform.rotation);
+                BroadcastMessage("Restart", SendMessageOptions.DontRequireReceiver);
+
                 level.Current.Restart();
-
-                // DO NOT do this before/in Restart(), otherwise the player could reset before
-                // the rest of the level, resulting in some strange stuff.
-                Teleport(respawnPoint.transform.position, respawnPoint.transform.rotation);
-
-                transform.parent.BroadcastMessage("Restart");
             };
     }
 
