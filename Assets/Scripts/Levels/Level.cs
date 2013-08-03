@@ -51,12 +51,12 @@ public sealed class Level : MonoBehaviour
 
     public void Restart()
     {
+        foreach (var child in transform.OfType<Transform>())
+            child.BroadcastMessage("Restart", SendMessageOptions.DontRequireReceiver);
+
         // TODO: Get rid of the code duplication.
         foreach (var child in transform.OfType<Transform>())
             if (child.name != "Entrance" && child.name != "Exit")
                 child.gameObject.SetActive(false);
-
-        foreach (var child in transform.OfType<Transform>())
-            child.BroadcastMessage("Restart", SendMessageOptions.DontRequireReceiver);
     }
 }

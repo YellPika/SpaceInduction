@@ -37,6 +37,8 @@ public sealed class PlayerBehaviour : MonoBehaviour
                 // DO NOT do this before/in Restart(), otherwise the player could reset before
                 // the rest of the level, resulting in some strange stuff.
                 Teleport(respawnPoint.transform.position, respawnPoint.transform.rotation);
+
+                transform.parent.BroadcastMessage("Restart");
             };
     }
 
