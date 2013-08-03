@@ -16,7 +16,7 @@ public sealed class Menu : MonoBehaviour
     {
         levels = FindSceneObjectsOfType(typeof(Level))
             .OfType<Level>()
-            .OrderBy(n => n.name)
+            .OrderBy(n => n.Number)
             .ToArray();
 
         player = transform.parent.GetComponentInChildren<PlayerBehaviour>();
