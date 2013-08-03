@@ -30,6 +30,11 @@ public sealed class ColliderPowerSource : PowerSource
 
     private void Restart()
     {
-        targets.Clear();
+        // flush out targets
+        if (enabled)
+        {
+            enabled = false;
+            enabled = true;
+        }
     }
 }
