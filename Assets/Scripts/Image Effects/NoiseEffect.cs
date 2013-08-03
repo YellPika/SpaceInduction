@@ -14,28 +14,36 @@ public sealed class NoiseEffect : MonoBehaviour
     public float Intensity = 0.5f;
     public float Opacity = 0.1f;
 
-    private void Awake()
+    private void Start()
     {
-        var data = Enumerable
-            .Range(0, 256)
-            .Select(n => (byte)n)
-            .Select(n => new Color32(n, n, n, n))
-            .ToArray();
-        for (int i = 0; i < data.Length; i++)
+        if (noise == null)
         {
-            var index = Random.Range(i, data.Length);
-            var temp = data[index];
-            data[index] = data[i];
-            data[i] = temp;
+            var data = Enumerable
+                .Range(0, 256)
+                .Select(n => (byte)n)
+                .Select(n => new Color32(n, n, n, n))
+                .ToArray();
+            for (int i = 0; i < data.Length; i++)
+            {
+                var index = Random.Range(i, data.Length);
+                var temp = data[index];
+                data[index] = data[i];
+                data[i] = temp;
+            }
+
+            noise = new Texture2D(data.Length, 1, TextureFormat.ARGB32, false, true);
+            noise.hideFlags = HideFlags.DontSave;
+            noise.filterMode = FilterMode.Bilinear;
+            noise.wrapMode = TextureWrapMode.Repeat;
+            noise.SetPixels32(data);
+            noise.Apply();
         }
 
-        noise = new Texture2D(data.Length, 1, TextureFormat.ARGB32, false, true);
-        noise.filterMode = FilterMode.Bilinear;
-        noise.wrapMode = TextureWrapMode.Repeat;
-        noise.SetPixels32(data);
-        noise.Apply();
-
-        material = new Material(Shader);
+        if (material == null)
+        {
+            material = new Material(Shader);
+            material.hideFlags = HideFlags.DontSave;
+        }
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

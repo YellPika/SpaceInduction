@@ -13,9 +13,13 @@ public sealed class InterlaceEffect : MonoBehaviour
     public Color Color = new Color(0, 0.5f, 0);
     public float Intensity = 0.1f;
 
-    private void Awake()
+    private void Start()
     {
-        material = new Material(Shader);
+        if (material == null)
+        {
+            material = new Material(Shader);
+            material.hideFlags = HideFlags.DontSave;
+        }
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
