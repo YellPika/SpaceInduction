@@ -9,6 +9,8 @@ public static class SpaceInduction
     public static void CreateLevel()
     {
         var level = LoadPrefab("Items/Level");
+        level.name = EditorApplication.currentScene;
+        level.name = Path.GetFileNameWithoutExtension(level.name);
 
         CreateEntrance(level);
         CreateExit(level);
@@ -27,7 +29,11 @@ public static class SpaceInduction
 
         var number = LoadPrefab("Items/Number");
         number.transform.parent = entrance.transform;
-
+        number.GetComponent<TextMesh>().text =
+            new string(level.name
+                .Where(char.IsDigit)
+                .ToArray());
+        
         var hall = LoadPrefab("Tiles/Hall");
         hall.transform.parent = entrance.transform;
         hall.AddComponent<SelfPowerSource>();
