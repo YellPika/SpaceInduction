@@ -39,14 +39,14 @@ public sealed class ElevatorBehaviour : MonoBehaviour
             };
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        animation.Play("Elevator." + state);
+        gameObject.SampleAnimation(animation.GetClip("Elevator." + (state == ElevatorState.Down ? "Up" : "Down")), 0);
     }
 
     private void Restart()
     {
         state = initialState;
-        gameObject.SampleAnimation(animation.GetClip("Elevator." + (state == ElevatorState.Down ? "Up" : "Down")), 0);
+        Start();
     }
 }

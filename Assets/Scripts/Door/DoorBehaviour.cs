@@ -21,8 +21,7 @@ public sealed class DoorBehaviour : MonoBehaviour
 
     private void Start()
     {
-        if (open)
-            animation.Play("Door.Open");
+        gameObject.SampleAnimation(animation.GetClip("Door." + (open ? "Close" : "Open")), 0);
     }
 
     private void Update()
@@ -33,7 +32,7 @@ public sealed class DoorBehaviour : MonoBehaviour
     private void Restart()
     {
         open = initiallyOpen;
-        gameObject.SampleAnimation(animation.GetClip("Door." + (open ? "Close" : "Open")), 0);
+        Start();
     }
 
     public bool Open()

@@ -7,10 +7,11 @@ public sealed class AlienPowerSource : PowerSource
     [SerializeField]
     private float power = 0.75f;
     private List<PowerProperty> targets = new List<PowerProperty>();
+
     private void OnTriggerEnter(Collider collider)
     {
         var property = collider.GetComponent<PowerProperty>();
-        if (property != null)
+        if (property != null && !targets.Contains(property))
             targets.Add(property);
     }
 
@@ -23,6 +24,7 @@ public sealed class AlienPowerSource : PowerSource
 
     private void Update()
     {
+        targets.RemoveAll(n => !n.gameObject.activeInHierarchy);
         foreach (var target in targets)
         {
             if (target.GetComponent<PlayerBehaviour>() != null)
