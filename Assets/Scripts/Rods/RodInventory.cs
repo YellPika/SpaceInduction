@@ -3,12 +3,31 @@ using UnityEngine;
 
 public sealed class RodInventory : MonoBehaviour
 {
-    private List<Rod> items = new List<Rod>();
+    private int total;
+    private int count;
 
-    public List<Rod> Items { get { return items; } }
+    public int Total { get { return total; } }
+
+    public void Add()
+    {
+        count++;
+        total++;
+    }
+
+    public int Remove()
+    {
+        var output = count;
+        count = 0;
+
+        if (total == 4)
+            total = 0;
+
+        return output;
+    }
 
     private void Restart()
     {
-        items.Clear();
+        total = 0;
+        count = 0;
     }
 }

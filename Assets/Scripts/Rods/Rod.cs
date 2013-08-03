@@ -3,18 +3,20 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public sealed class Rod : MonoBehaviour
 {
+    [SerializeField]
+    private int index;
+
     private void OnTriggerEnter(Collider sender)
     {
         var inventory = sender.GetComponent<RodInventory>();
-        if (inventory == null)
+        if (inventory == null || inventory.Total != index)
             return;
 
+        inventory.Add();
         renderer.enabled = false;
         collider.enabled = false;
         foreach (Transform child in transform)
             child.gameObject.SetActive(false);
-
-        inventory.Items.Add(this);
     }
 
     private void Restart()

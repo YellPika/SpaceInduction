@@ -27,17 +27,15 @@ public sealed class GeneratorTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         var inventory = collider.GetComponent<RodInventory>();
-        if (inventory == null || inventory.Items.Count == 0)
+        if (inventory == null)
             return;
 
-        inventory.Items.RemoveAll(_ =>
-            {
-                if (insertionCount >= rods.Length)
-                    return false;
+        var count = inventory.Remove();
+        if (count == 0)
+            return;
 
-                rods[insertionCount++].Insert();
-                return true;
-            });
+        for (int i = 0; i < count; i++)
+            rods[insertionCount++].Insert();
 
         if (Triggered != null)
             Triggered(this, EventArgs.Empty);

@@ -2426,6 +2426,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  index: 3
 --- !u!65 &430604808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2722,6 +2723,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b97f16cc1dfbe8b48ac31a4816786a96, type: 2}
+    - target: {fileID: 11400000, guid: 44d67aed45bc05a48b64ea468f0bbf08, type: 2}
+      propertyPath: index
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44d67aed45bc05a48b64ea468f0bbf08, type: 2}
   m_RootGameObject: {fileID: 223938937}
@@ -2770,6 +2775,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b97f16cc1dfbe8b48ac31a4816786a96, type: 2}
+    - target: {fileID: 11400000, guid: 44d67aed45bc05a48b64ea468f0bbf08, type: 2}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44d67aed45bc05a48b64ea468f0bbf08, type: 2}
   m_RootGameObject: {fileID: 1101343193}
@@ -4891,6 +4900,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  index: 1
 --- !u!65 &1189396643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4972,6 +4982,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  index: 2
 --- !u!65 &1209814709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5384,6 +5395,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b97f16cc1dfbe8b48ac31a4816786a96, type: 2}
+    - target: {fileID: 11400000, guid: 44d67aed45bc05a48b64ea468f0bbf08, type: 2}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44d67aed45bc05a48b64ea468f0bbf08, type: 2}
   m_RootGameObject: {fileID: 1943436479}
@@ -5602,6 +5617,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  index: 0
 --- !u!65 &1378230678
 BoxCollider:
   m_ObjectHideFlags: 0
