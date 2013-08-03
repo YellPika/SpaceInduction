@@ -8,7 +8,7 @@ public static class SpaceInduction
     [MenuItem("Space Induction/Create Level")]
     public static void CreateLevel()
     {
-        var level = LoadPrefab("Levels/Level");
+        var level = LoadPrefab("Items/Level");
 
         CreateEntrance(level);
         CreateExit(level);
@@ -25,7 +25,7 @@ public static class SpaceInduction
         var entrance = new GameObject("Entrance");
         entrance.transform.parent = level.transform;
 
-        var number = LoadPrefab("Levels/Number");
+        var number = LoadPrefab("Items/Number");
         number.transform.parent = entrance.transform;
 
         var hall = LoadPrefab("Tiles/Hall");
