@@ -656,7 +656,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
       propertyPath: value.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
       propertyPath: value.g
@@ -664,7 +664,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
       propertyPath: value.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
@@ -1523,6 +1523,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
       propertyPath: value.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
+      propertyPath: value.r
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1946,7 +1950,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 1, g: 0, b: 0, a: 1}
+  value: {r: 0, g: 0, b: 1, a: 1}
 --- !u!114 &192947659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2207,6 +2211,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &213307055
 BoxCollider:
@@ -2805,11 +2810,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 1e7cad216ffe01e4a8339cc061732d9b, type: 2}
       propertyPath: value.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 1e7cad216ffe01e4a8339cc061732d9b, type: 2}
       propertyPath: value.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e7cad216ffe01e4a8339cc061732d9b, type: 2}
@@ -3679,7 +3684,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 1, g: 0, b: 0, a: 1}
+  value: {r: 0, g: 0, b: 1, a: 1}
 --- !u!4 &344503584
 Transform:
   m_ObjectHideFlags: 0
@@ -3972,7 +3977,6 @@ GameObject:
   - 4: {fileID: 357606089}
   - 65: {fileID: 357606097}
   - 111: {fileID: 357606096}
-  - 82: {fileID: 357606095}
   - 114: {fileID: 357606091}
   - 114: {fileID: 357606094}
   - 114: {fileID: 357606090}
@@ -3997,6 +4001,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe70587c41c4f794fb76bff1d2cc6635, type: 3}
   m_Name: 
+  slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   open: 0
 --- !u!4 &357606089
 Transform:
@@ -4077,63 +4082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
   value: 0
---- !u!82 &357606095
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 1436587003}
-  m_GameObject: {fileID: 357606087}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!111 &357606096
 Animation:
   m_ObjectHideFlags: 0
@@ -5217,6 +5165,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &415340905
 BoxCollider:
@@ -5388,7 +5337,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 4a5c0c6541cdfcf40ae9d00fb2caabc5, type: 2}
       propertyPath: timeLimit
-      value: 172
+      value: 155
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4a5c0c6541cdfcf40ae9d00fb2caabc5, type: 2}
       propertyPath: m_Name
@@ -7800,6 +7749,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b89dc163d10ab0b4881deac4dac19f7f, type: 2}
+      propertyPath: value.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b89dc163d10ab0b4881deac4dac19f7f, type: 2}
+      propertyPath: value.g
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b89dc163d10ab0b4881deac4dac19f7f, type: 2}
   m_RootGameObject: {fileID: 827910779}
@@ -8459,6 +8416,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ca558d55a2cbf347a95710fbcad67a8, type: 3}
   m_Name: 
+  running: {fileID: 8300000, guid: 2f8c76d223fc63f4c8cb45e935efec73, type: 3}
   targets:
   - {fileID: 827910783}
   - {fileID: 1314801817}
@@ -9729,7 +9687,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 1, g: 0, b: 0, a: 1}
+  value: {r: 0, g: 0, b: 1, a: 1}
 --- !u!65 &709778194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11501,6 +11459,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &827571297
 BoxCollider:
@@ -11600,7 +11559,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 1, g: 1, b: 1, a: 1}
+  value: {r: 0, g: 0, b: 1, a: 1}
 --- !u!114 &827910783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12675,6 +12634,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &878473986
 BoxCollider:
@@ -12790,6 +12750,14 @@ Prefab:
     - target: {fileID: 400006, guid: b89dc163d10ab0b4881deac4dac19f7f, type: 2}
       propertyPath: m_LocalRotation.w
       value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b89dc163d10ab0b4881deac4dac19f7f, type: 2}
+      propertyPath: value.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b89dc163d10ab0b4881deac4dac19f7f, type: 2}
+      propertyPath: value.g
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b89dc163d10ab0b4881deac4dac19f7f, type: 2}
@@ -12939,7 +12907,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 1, g: 1, b: 1, a: 1}
+  value: {r: 0, g: 0, b: 1, a: 1}
 --- !u!65 &900092570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13727,6 +13695,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
       propertyPath: value.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
+      propertyPath: value.r
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14640,6 +14612,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
       propertyPath: value.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6b8a6b8b93303454289c498eaf8beee8, type: 2}
+      propertyPath: value.r
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -15312,7 +15288,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 0, g: 0, b: 1, a: 1}
+  value: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &1003118286
 Transform:
   m_ObjectHideFlags: 0
@@ -15647,9 +15623,9 @@ AudioSource:
   m_GameObject: {fileID: 1008807080}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 519e968bb56be234396175b23551a750, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fcaa5490f4914de41a1308498ce6206f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .100000001
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -17748,6 +17724,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d6ee0020a6d7794281c578e9873f61c, type: 3}
   m_Name: 
+  insert: {fileID: 8300000, guid: 52838c5ea1bccc04f8fade46f0981dc5, type: 3}
 --- !u!65 &1162488184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19506,7 +19483,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 1, g: 0, b: 0, a: 1}
+  value: {r: 0, g: 0, b: 1, a: 1}
 --- !u!114 &1257017047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27822,6 +27799,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a3054586f2c1944b2982f38b8dcf55, type: 3}
   m_Name: 
+  move: {fileID: 8300000, guid: 7e7887d09b600b241b1de34a86a9c02b, type: 3}
   smoothMaterial: {fileID: 13400000, guid: 48250fa768e2a124c94cd1c41ea1ad5f, type: 2}
   roughMaterial: {fileID: 13400000, guid: fb0aed5510fd87441b477f05d232e80e, type: 2}
 --- !u!65 &1847370229
@@ -28581,7 +28559,6 @@ GameObject:
   - 4: {fileID: 1912753037}
   - 65: {fileID: 1912753046}
   - 111: {fileID: 1912753045}
-  - 82: {fileID: 1912753044}
   - 114: {fileID: 1912753040}
   - 114: {fileID: 1912753043}
   - 114: {fileID: 1912753039}
@@ -28624,6 +28601,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe70587c41c4f794fb76bff1d2cc6635, type: 3}
   m_Name: 
+  slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   open: 0
 --- !u!114 &1912753039
 MonoBehaviour:
@@ -28686,63 +28664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
   value: 0
---- !u!82 &1912753044
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 355817600}
-  m_GameObject: {fileID: 1912753036}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!111 &1912753045
 Animation:
   m_ObjectHideFlags: 0
@@ -28976,7 +28897,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe741906e3003a44a0f473b0a22a403, type: 3}
   m_Name: 
-  timeLimit: 172
+  timeLimit: 155
   number: 16
 --- !u!65 &1938463322
 BoxCollider:
@@ -30280,6 +30201,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc26f0f51d92a3a4f984b6ffa779239e, type: 3}
   m_Name: 
+  footsteps: {fileID: 8300000, guid: c3017768785e64549bbe1e8ce681639c, type: 3}
   MoveSpeed: 10
   TurnSpeed: 135
   TurnAmount: 0
