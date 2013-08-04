@@ -8623,6 +8623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
   footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 400274}
   - {fileID: 400100}
@@ -8643,6 +8644,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 8300000, guid: 41639af56ea7bc342aa167424e258706, type: 3}
   power: .25
 --- !u!114 &11400006
 MonoBehaviour:
@@ -10321,6 +10323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
   footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 400220}
   - {fileID: 400114}
@@ -10341,6 +10344,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 8300000, guid: 41639af56ea7bc342aa167424e258706, type: 3}
   power: .25
 --- !u!114 &11400300
 MonoBehaviour:

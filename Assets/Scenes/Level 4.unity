@@ -1216,6 +1216,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 8300000, guid: 41639af56ea7bc342aa167424e258706, type: 3}
   power: .25
 --- !u!135 &142188443
 SphereCollider:
@@ -8267,6 +8268,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 8300000, guid: 41639af56ea7bc342aa167424e258706, type: 3}
   power: .25
 --- !u!135 &1080277303
 SphereCollider:

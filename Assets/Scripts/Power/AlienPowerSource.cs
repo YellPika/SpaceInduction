@@ -5,8 +5,22 @@ using UnityEngine;
 public sealed class AlienPowerSource : PowerSource
 {
     [SerializeField]
+    private AudioClip drain;
+    private AudioSource drainSource;
+    private float targetDrainVolume;
+
+    [SerializeField]
     private float power = 0.75f;
     private HashSet<PowerProperty> targets = new HashSet<PowerProperty>();
+
+    private void Awake()
+    {
+        drainSource = gameObject.AddComponent<AudioSource>();
+        drainSource.clip = drain;
+        drainSource.loop = true;
+        drainSource.volume = 0;
+        drainSource.Play();
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -24,14 +38,20 @@ public sealed class AlienPowerSource : PowerSource
 
     private void Update()
     {
+        targetDrainVolume = 0;
+
         foreach (var target in targets)
         {
-            
-			if (target.GetComponent<PlayerBehaviour>() != null)
+            if (target.GetComponent<PlayerBehaviour>() != null)
+            {
                 target.Apply(power * Time.deltaTime * -0.5f);
-			else
+                targetDrainVolume = 1;
+            }
+            else
                 target.Apply(-power);
         }
+
+        drainSource.volume = Mathf.Clamp01(drainSource.volume + Mathf.Sign(targetDrainVolume - drainSource.volume) * Time.deltaTime * 2);
     }
 
     private void Restart()
