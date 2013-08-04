@@ -53,7 +53,7 @@ ModelImporter:
       takeName: Walk
       firstFrame: 0
       lastFrame: 32
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -107,5 +107,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   additionalBone: 1
-  animationType: 2
+  animationType: 1
   userData: 

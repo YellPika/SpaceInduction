@@ -5,6 +5,11 @@ using UnityEngine;
 public sealed class GlobBehaviour : MonoBehaviour
 {
     [SerializeField]
+    private AudioClip footstep;
+    private AudioSource footstepSource;
+    private int footstepIndex;
+
+    [SerializeField]
     private Transform[] targets;
 
     [SerializeField]
@@ -23,12 +28,15 @@ public sealed class GlobBehaviour : MonoBehaviour
 
     private void Awake()
     {
+        footstepSource = gameObject.AddComponent<AudioSource>();
+
         initialPosition = transform.position;
         initialRotation = transform.rotation;
     }
 
     private void Start()
     {
+        footstepIndex = 0;
         travelPath = TravelPath();
     }
 
@@ -42,6 +50,7 @@ public sealed class GlobBehaviour : MonoBehaviour
 
     private void Update()
     {
+        animation["Glob.Walk"].speed = speed / 0.25f;
         travelPath.MoveNext();
 
         var source = transform.rotation.eulerAngles;
@@ -86,5 +95,11 @@ public sealed class GlobBehaviour : MonoBehaviour
             if (Vector3.Distance(transform.position, target) < tolerance)
                 corners.Dequeue();
         }
+    }
+
+    private void PlayFootstep()
+    {
+        // Damp every second (hind leg) step.
+        footstepSource.PlayOneShot(footstep, (++footstepIndex % 2) == 0 ? 1 : 0.5f);
     }
 }
