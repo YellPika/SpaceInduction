@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -32,7 +33,20 @@ public sealed class GeneratorBehaviour : MonoBehaviour
 
             if (Started != null)
                 Started(this, EventArgs.Empty);
+
+            audio.pitch = 0;
+            audio.Play();
+            StartCoroutine(IncreasePitch());
         };
+    }
+
+    private IEnumerator IncreasePitch()
+    {
+        while (audio.pitch < 3)
+        {
+            audio.pitch += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     private void Restart()
