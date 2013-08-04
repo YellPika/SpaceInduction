@@ -38,5 +38,6 @@ public sealed class PlayerWheelBehaviour : MonoBehaviour
 
         var velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.z);
         footstepsSource.volume = velocity.magnitude;
+        footstepsSource.pitch = Time.timeScale;
     }
 }
