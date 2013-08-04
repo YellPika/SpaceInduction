@@ -16,7 +16,7 @@ public sealed class PowerNoiseLink : Link<PowerProperty, float>
 
     protected override void SetValue(float value)
     {
-        audio.volume = curve.Evaluate(value) * 10;
+        audio.volume = curve.Evaluate(value);
         noise.Opacity = curve.Evaluate(value);
     }
 }
