@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 95: {fileID: 9500000}
+  - 111: {fileID: 11100004}
   - 54: {fileID: 5400000}
   - 135: {fileID: 13500000}
   - 114: {fileID: 11400004}
@@ -2122,7 +2122,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400248}
   - 65: {fileID: 6500114}
-  - 111: {fileID: 11100004}
+  - 111: {fileID: 11100008}
   - 114: {fileID: 11400242}
   - 114: {fileID: 11400238}
   - 114: {fileID: 11400236}
@@ -2719,7 +2719,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400320}
-  - 95: {fileID: 9500002}
+  - 111: {fileID: 11100006}
   - 54: {fileID: 5400008}
   - 135: {fileID: 13500002}
   - 114: {fileID: 11400298}
@@ -4326,7 +4326,7 @@ Transform:
   m_LocalPosition: {x: .200000003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400238}
+  m_Father: {fileID: 400248}
 --- !u!4 &400206
 Transform:
   m_ObjectHideFlags: 1
@@ -4353,7 +4353,7 @@ Transform:
   m_LocalPosition: {x: .200000003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400248}
+  m_Father: {fileID: 400238}
 --- !u!4 &400210
 Transform:
   m_ObjectHideFlags: 1
@@ -4546,7 +4546,7 @@ Transform:
   - {fileID: 400334}
   - {fileID: 400070}
   - {fileID: 400092}
-  - {fileID: 400204}
+  - {fileID: 400208}
   m_Father: {fileID: 400196}
 --- !u!4 &400240
 Transform:
@@ -4608,7 +4608,7 @@ Transform:
   - {fileID: 400304}
   - {fileID: 400068}
   - {fileID: 400130}
-  - {fileID: 400208}
+  - {fileID: 400204}
   m_Father: {fileID: 400280}
 --- !u!4 &400250
 Transform:
@@ -7160,30 +7160,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.5, z: 1}
   m_Center: {x: 0, y: 1.25, z: .5}
---- !u!95 &9500000
-Animator:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
-  m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 0
-  m_AnimatePhysics: 0
---- !u!95 &9500002
-Animator:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100320}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
-  m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 0
-  m_AnimatePhysics: 0
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -8575,6 +8551,42 @@ Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+--- !u!111 &11100006
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100320}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+--- !u!111 &11100008
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100248}
   m_Enabled: 1
   serializedVersion: 3
@@ -8610,6 +8622,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
+  footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
   targets:
   - {fileID: 400274}
   - {fileID: 400100}
@@ -10307,6 +10320,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
+  footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
   targets:
   - {fileID: 400220}
   - {fileID: 400114}

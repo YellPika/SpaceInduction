@@ -72,7 +72,7 @@ NavMeshSettings:
     accuratePlacement: 0
     minRegionArea: 2
     widthInaccuracy: 16.666666
-    heightInaccuracy: 10
+    heightInaccuracy: 1
   m_NavMesh: {fileID: 19400000, guid: 9368a4ef321b2e64693b3e347b20d9c6, type: 2}
 --- !u!1 &6126069
 GameObject:
@@ -1159,7 +1159,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 142188440}
-  - 95: {fileID: 142188446}
+  - 111: {fileID: 142188445}
   - 54: {fileID: 142188444}
   - 135: {fileID: 142188443}
   - 114: {fileID: 142188442}
@@ -1195,6 +1195,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
+  footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
   targets:
   - {fileID: 337810345}
   - {fileID: 1461151999}
@@ -1244,19 +1245,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &142188446
-Animator:
+--- !u!111 &142188445
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
+  m_PrefabParentObject: {fileID: 11100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
     type: 2}
   m_PrefabInternal: {fileID: 328225132}
   m_GameObject: {fileID: 142188439}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
-  m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &152529336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,6 +2233,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ca558d55a2cbf347a95710fbcad67a8, type: 3}
   m_Name: 
+  running: {fileID: 8300000, guid: 2f8c76d223fc63f4c8cb45e935efec73, type: 3}
   targets:
   - {fileID: 1827118673}
   - {fileID: 633798123}
@@ -2721,9 +2729,9 @@ AudioSource:
   m_GameObject: {fileID: 277010162}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 519e968bb56be234396175b23551a750, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fcaa5490f4914de41a1308498ce6206f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .100000001
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4943,6 +4951,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d6ee0020a6d7794281c578e9873f61c, type: 3}
   m_Name: 
+  insert: {fileID: 8300000, guid: 52838c5ea1bccc04f8fade46f0981dc5, type: 3}
 --- !u!65 &573885784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5686,6 +5695,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &649356347
 BoxCollider:
@@ -6983,6 +6993,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 3
 --- !u!65 &893730468
 BoxCollider:
@@ -7721,6 +7732,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 2
 --- !u!65 &1006885085
 BoxCollider:
@@ -8197,7 +8209,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1080277300}
-  - 95: {fileID: 1080277305}
+  - 111: {fileID: 1080277305}
   - 54: {fileID: 1080277304}
   - 135: {fileID: 1080277303}
   - 114: {fileID: 1080277302}
@@ -8233,6 +8245,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
+  footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
   targets:
   - {fileID: 642058255}
   - {fileID: 1011328584}
@@ -8282,19 +8295,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1080277305
-Animator:
+--- !u!111 &1080277305
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
+  m_PrefabParentObject: {fileID: 11100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
     type: 2}
   m_PrefabInternal: {fileID: 448940391}
   m_GameObject: {fileID: 1080277299}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
-  m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &1086766839
 GameObject:
   m_ObjectHideFlags: 0
@@ -8933,7 +8952,6 @@ GameObject:
   - 4: {fileID: 1188720557}
   - 65: {fileID: 1188720566}
   - 111: {fileID: 1188720565}
-  - 82: {fileID: 1188720564}
   - 114: {fileID: 1188720559}
   - 114: {fileID: 1188720563}
   - 114: {fileID: 1188720558}
@@ -9000,6 +9018,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe70587c41c4f794fb76bff1d2cc6635, type: 3}
   m_Name: 
+  slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   open: 0
 --- !u!114 &1188720561
 MonoBehaviour:
@@ -9038,63 +9057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
   value: 0
---- !u!82 &1188720564
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 601270187}
-  m_GameObject: {fileID: 1188720556}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!111 &1188720565
 Animation:
   m_ObjectHideFlags: 0
@@ -9549,6 +9511,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 1
 --- !u!65 &1273109979
 BoxCollider:
@@ -12434,7 +12397,6 @@ GameObject:
   - 4: {fileID: 1613672660}
   - 65: {fileID: 1613672669}
   - 111: {fileID: 1613672668}
-  - 82: {fileID: 1613672667}
   - 114: {fileID: 1613672666}
   - 114: {fileID: 1613672665}
   - 114: {fileID: 1613672664}
@@ -12477,6 +12439,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe70587c41c4f794fb76bff1d2cc6635, type: 3}
   m_Name: 
+  slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   open: 0
 --- !u!114 &1613672662
 MonoBehaviour:
@@ -12539,63 +12502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
   value: {r: 0, g: 0, b: 1, a: 1}
---- !u!82 &1613672667
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 1341882366}
-  m_GameObject: {fileID: 1613672659}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!111 &1613672668
 Animation:
   m_ObjectHideFlags: 0
@@ -15504,6 +15410,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc26f0f51d92a3a4f984b6ffa779239e, type: 3}
   m_Name: 
+  footsteps: {fileID: 8300000, guid: c3017768785e64549bbe1e8ce681639c, type: 3}
   MoveSpeed: 10
   TurnSpeed: 135
   TurnAmount: 0
