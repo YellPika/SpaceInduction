@@ -6,12 +6,22 @@ using UnityEngine;
 public sealed class GeneratorBehaviour : MonoBehaviour
 {
     [SerializeField]
+    private AudioClip running;
+    private AudioSource runningSource;
+
+    [SerializeField]
     private PowerSource[] targets;
 
     public event EventHandler Started;
 
     private void Awake()
     {
+        runningSource = gameObject.AddComponent<AudioSource>();
+        runningSource.clip = running;
+        runningSource.pitch = 0;
+        runningSource.loop = true;
+        runningSource.Play();
+
         var trigger = GetComponentInChildren<GeneratorTrigger>();
         trigger.Triggered += (sender, e) =>
         {
@@ -34,8 +44,6 @@ public sealed class GeneratorBehaviour : MonoBehaviour
             if (Started != null)
                 Started(this, EventArgs.Empty);
 
-            audio.pitch = 0;
-            audio.Play();
             StartCoroutine(IncreasePitch());
         };
     }
@@ -44,13 +52,15 @@ public sealed class GeneratorBehaviour : MonoBehaviour
     {
         while (audio.pitch < 3)
         {
-            audio.pitch += 0.1f;
+            runningSource.pitch += 0.1f;
             yield return new WaitForSeconds(0.1f);
         }
     }
 
     private void Restart()
     {
+        runningSource.pitch = 0;
+
         animation.Stop();
         gameObject.SampleAnimation(animation.GetClip("Generator.Start"), 0);
 
