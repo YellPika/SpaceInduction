@@ -8,6 +8,10 @@ public sealed class MovableBox : MonoBehaviour
     private Vector3 startPosition;
 
     [SerializeField]
+    private AudioClip move;
+    private AudioSource moveSource;
+
+    [SerializeField]
     private PhysicMaterial smoothMaterial;
 
     [SerializeField]
@@ -15,7 +19,19 @@ public sealed class MovableBox : MonoBehaviour
     
     private void Awake()
     {
+        moveSource = gameObject.AddComponent<AudioSource>();
+        moveSource.clip = move;
+        moveSource.loop = true;
+        moveSource.pitch = 0;
+        moveSource.Play();
+
         startPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        var velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.z);
+        moveSource.pitch = velocity.magnitude;
     }
 
     private void OnTriggerStay(Collider collider)
