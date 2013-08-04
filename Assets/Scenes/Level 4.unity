@@ -1196,6 +1196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
   footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 337810345}
   - {fileID: 1461151999}
@@ -8246,6 +8247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
   footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 642058255}
   - {fileID: 1011328584}

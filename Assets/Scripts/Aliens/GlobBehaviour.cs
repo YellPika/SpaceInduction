@@ -10,6 +10,11 @@ public sealed class GlobBehaviour : MonoBehaviour
     private int footstepIndex;
 
     [SerializeField]
+    private AudioClip moan;
+    private AudioSource moanSource;
+    private float timeSinceLastMoan;
+
+    [SerializeField]
     private Transform[] targets;
 
     [SerializeField]
@@ -29,6 +34,7 @@ public sealed class GlobBehaviour : MonoBehaviour
     private void Awake()
     {
         footstepSource = gameObject.AddComponent<AudioSource>();
+        moanSource = gameObject.AddComponent<AudioSource>();
 
         initialPosition = transform.position;
         initialRotation = transform.rotation;
@@ -50,6 +56,15 @@ public sealed class GlobBehaviour : MonoBehaviour
 
     private void Update()
     {
+        timeSinceLastMoan += Time.deltaTime;
+        if (timeSinceLastMoan >= 3)
+        {
+            timeSinceLastMoan = 0;
+
+            if (Random.Range(0, 4) == 0)
+                moanSource.PlayOneShot(moan);
+        }
+
         animation["Glob.Walk"].speed = speed / 0.25f;
         travelPath.MoveNext();
 

@@ -4,6 +4,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  - moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
