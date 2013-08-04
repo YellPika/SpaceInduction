@@ -13,6 +13,8 @@ public sealed class AlienPowerSource : PowerSource
         var property = collider.GetComponent<PowerProperty>();
         if (property != null && !targets.Contains(property))
             targets.Add(property);
+		
+		
     }
 
     private void OnTriggerExit(Collider collider)
@@ -27,9 +29,10 @@ public sealed class AlienPowerSource : PowerSource
         targets.RemoveAll(n => !n.gameObject.activeInHierarchy);
         foreach (var target in targets)
         {
-            if (target.GetComponent<PlayerBehaviour>() != null)
+            
+			if (target.GetComponent<PlayerBehaviour>() != null)
                 target.Apply(power * Time.deltaTime * -0.5f);
-            else
+			else
                 target.Apply(-power);
         }
     }
