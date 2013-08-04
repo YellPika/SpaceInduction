@@ -19,7 +19,7 @@ RenderSettings:
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_AmbientLight: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -1768,7 +1768,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 185151163}
-  - 95: {fileID: 185151168}
+  - 111: {fileID: 185151168}
   - 54: {fileID: 185151167}
   - 135: {fileID: 185151166}
   - 114: {fileID: 185151165}
@@ -1804,6 +1804,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
+  footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 1767185738}
   - {fileID: 1168579631}
@@ -1821,6 +1823,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 8300000, guid: 41639af56ea7bc342aa167424e258706, type: 3}
   power: .5
 --- !u!135 &185151166
 SphereCollider:
@@ -1851,19 +1854,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &185151168
-Animator:
+--- !u!111 &185151168
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
+  m_PrefabParentObject: {fileID: 11100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
     type: 2}
   m_PrefabInternal: {fileID: 989904278}
   m_GameObject: {fileID: 185151162}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
-  m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &187835136
 GameObject:
   m_ObjectHideFlags: 0
@@ -18139,7 +18148,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1180635832}
-  - 95: {fileID: 1180635837}
+  - 111: {fileID: 1180635837}
   - 54: {fileID: 1180635836}
   - 135: {fileID: 1180635835}
   - 114: {fileID: 1180635833}
@@ -18175,6 +18184,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
+  footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 2036762834}
   - {fileID: 1483205084}
@@ -18191,6 +18202,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 0}
   power: .5
 --- !u!135 &1180635835
 SphereCollider:
@@ -18221,19 +18233,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1180635837
-Animator:
+--- !u!111 &1180635837
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
+  m_PrefabParentObject: {fileID: 11100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
     type: 2}
   m_PrefabInternal: {fileID: 45495939}
   m_GameObject: {fileID: 1180635831}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
-  m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &1184966644
 GameObject:
   m_ObjectHideFlags: 0
@@ -18786,7 +18804,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1206136581}
-  - 95: {fileID: 1206136586}
+  - 111: {fileID: 1206136586}
   - 54: {fileID: 1206136585}
   - 135: {fileID: 1206136584}
   - 114: {fileID: 1206136583}
@@ -18822,6 +18840,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
+  footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 1459529000}
   - {fileID: 1327058345}
@@ -18839,6 +18859,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 8300000, guid: 41639af56ea7bc342aa167424e258706, type: 3}
   power: .5
 --- !u!135 &1206136584
 SphereCollider:
@@ -18869,19 +18890,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1206136586
-Animator:
+--- !u!111 &1206136586
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
+  m_PrefabParentObject: {fileID: 11100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
     type: 2}
   m_PrefabInternal: {fileID: 2058503029}
   m_GameObject: {fileID: 1206136580}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
-  m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &1208118297
 GameObject:
   m_ObjectHideFlags: 0
@@ -24260,7 +24287,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1611120967}
-  - 95: {fileID: 1611120972}
+  - 111: {fileID: 1611120972}
   - 54: {fileID: 1611120971}
   - 135: {fileID: 1611120970}
   - 114: {fileID: 1611120969}
@@ -24296,6 +24323,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
+  footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 365818172}
   - {fileID: 1316723716}
@@ -24315,6 +24344,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 8300000, guid: 41639af56ea7bc342aa167424e258706, type: 3}
   power: .5
 --- !u!135 &1611120970
 SphereCollider:
@@ -24345,19 +24375,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1611120972
-Animator:
+--- !u!111 &1611120972
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
+  m_PrefabParentObject: {fileID: 11100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9,
     type: 2}
   m_PrefabInternal: {fileID: 1269690880}
   m_GameObject: {fileID: 1611120966}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 811a379535cf19d42b0f56fcee692c15, type: 3}
-  m_Controller: {fileID: 9100000, guid: d18dcf28b818a864d81a18f86cfc904f, type: 2}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0f081d0b23d6ec244b5ee1a8c069ca92, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &1615801369
 GameObject:
   m_ObjectHideFlags: 0
