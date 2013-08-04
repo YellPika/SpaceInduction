@@ -5,6 +5,13 @@ public enum ElevatorState { Up, Down }
 // Logic for operating the elevator.
 public sealed class ElevatorBehaviour : MonoBehaviour
 {
+    [SerializeField]
+    private AudioClip moveUp;
+    [SerializeField]
+    private AudioClip moveDown;
+
+    private AudioSource moveSource;
+
     private ElevatorState initialState;
     private bool isFull;
 
@@ -15,6 +22,8 @@ public sealed class ElevatorBehaviour : MonoBehaviour
     private void Awake()
     {
         initialState = state;
+
+        moveSource = gameObject.AddComponent<AudioSource>();
 
         GetComponentInChildren<ElevatorEnterTrigger>().Triggered +=
             (sender, e) =>
@@ -30,6 +39,9 @@ public sealed class ElevatorBehaviour : MonoBehaviour
                     : ElevatorState.Down;
 
                 animation.Play("Elevator." + state);
+
+                moveSource.clip = state == ElevatorState.Up ? moveUp : moveDown;
+                moveSource.Play();
             };
 
         GetComponentInChildren<ElevatorExitTrigger>().Triggered +=

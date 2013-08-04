@@ -2218,6 +2218,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee4e3ec8a0625f640b43cbab0276c7ae, type: 3}
   m_Name: 
+  moveUp: {fileID: 8300000, guid: cfe7add601c7dea4096c272310b58063, type: 3}
+  moveDown: {fileID: 8300000, guid: 9518065edff2a204b8ff4138750aad7c, type: 3}
   state: 1
 --- !u!114 &11400038
 MonoBehaviour:
