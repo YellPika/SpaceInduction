@@ -13,8 +13,6 @@ public sealed class AlienPowerSource : PowerSource
         var property = collider.GetComponent<PowerProperty>();
         if (property != null)
             targets.Add(property);
-		
-		
     }
 
     private void OnTriggerExit(Collider collider)
