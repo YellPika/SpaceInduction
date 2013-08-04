@@ -5,6 +5,7 @@ MonoImporter:
   defaultReferences:
   - moveUp: {fileID: 8300000, guid: cfe7add601c7dea4096c272310b58063, type: 3}
   - moveDown: {fileID: 8300000, guid: 9518065edff2a204b8ff4138750aad7c, type: 3}
+  - slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -9,8 +9,11 @@ public sealed class ElevatorBehaviour : MonoBehaviour
     private AudioClip moveUp;
     [SerializeField]
     private AudioClip moveDown;
+    [SerializeField]
+    private AudioClip slide;
 
     private AudioSource moveSource;
+    private AudioSource slideSource;
 
     private ElevatorState initialState;
     private bool isFull;
@@ -23,7 +26,8 @@ public sealed class ElevatorBehaviour : MonoBehaviour
     {
         initialState = state;
 
-        moveSource = gameObject.AddComponent<AudioSource>();
+        moveSource = transform.FindChild("Lift").gameObject.AddComponent<AudioSource>();
+        slideSource = transform.FindChild("Lift").gameObject.AddComponent<AudioSource>();
 
         GetComponentInChildren<ElevatorEnterTrigger>().Triggered +=
             (sender, e) =>
@@ -40,8 +44,10 @@ public sealed class ElevatorBehaviour : MonoBehaviour
 
                 animation.Play("Elevator." + state);
 
-                moveSource.clip = state == ElevatorState.Up ? moveUp : moveDown;
-                moveSource.Play();
+                moveSource.mute = false;
+                moveSource.PlayOneShot(state == ElevatorState.Up ? moveUp : moveDown);
+
+                slideSource.PlayOneShot(slide);
             };
 
         GetComponentInChildren<ElevatorExitTrigger>().Triggered +=
@@ -60,5 +66,10 @@ public sealed class ElevatorBehaviour : MonoBehaviour
     {
         state = initialState;
         Start();
+    }
+
+    private void OnOpen()
+    {
+        slideSource.PlayOneShot(slide);
     }
 }

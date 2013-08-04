@@ -23,7 +23,6 @@ public sealed class DoorBehaviour : MonoBehaviour
         initiallyOpen = open;
 
         slideSource = gameObject.AddComponent<AudioSource>();
-        slideSource.clip = slide;
     }
 
     private void Start()
@@ -50,7 +49,7 @@ public sealed class DoorBehaviour : MonoBehaviour
             return false;
 
         animation.Play("Door.Open");
-        slideSource.Play();
+        slideSource.PlayOneShot(slide);
 
         open = true;
 
@@ -63,7 +62,7 @@ public sealed class DoorBehaviour : MonoBehaviour
             return false;
 
         animation.Play("Door.Close");
-        slideSource.Play();
+        slideSource.PlayOneShot(slide);
 
         open = false;
 
