@@ -32,12 +32,12 @@ public sealed class PlayerBehaviour : MonoBehaviour
                 if (e.Value != 0 || level.Current == null)
                     return;
 
-                level.Current.Restart();
-
                 Teleport(
                     respawnPoint.Current.transform.position,
                     respawnPoint.Current.transform.rotation);
                 BroadcastMessage("Restart", SendMessageOptions.DontRequireReceiver);
+
+                level.Current.Restart();
             };
     }
 

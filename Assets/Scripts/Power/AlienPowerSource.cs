@@ -6,12 +6,12 @@ public sealed class AlienPowerSource : PowerSource
 {
     [SerializeField]
     private float power = 0.75f;
-    private List<PowerProperty> targets = new List<PowerProperty>();
+    private HashSet<PowerProperty> targets = new HashSet<PowerProperty>();
 
     private void OnTriggerEnter(Collider collider)
     {
         var property = collider.GetComponent<PowerProperty>();
-        if (property != null && !targets.Contains(property))
+        if (property != null)
             targets.Add(property);
     }
 
@@ -24,7 +24,6 @@ public sealed class AlienPowerSource : PowerSource
 
     private void Update()
     {
-        targets.RemoveAll(n => !n.gameObject.activeInHierarchy);
         foreach (var target in targets)
         {
             if (target.GetComponent<PlayerBehaviour>() != null)
@@ -32,5 +31,19 @@ public sealed class AlienPowerSource : PowerSource
             else
                 target.Apply(-power);
         }
+    }
+
+    private void Restart()
+    {
+        targets.Clear();
+        collider.enabled = false;
+        
+        // This is a hack, because for some stupid reason, iterator coroutines won't work.
+        Invoke("Reenable", 0);
+    }
+
+    private void Reenable()
+    {
+        collider.enabled = true;
     }
 }

@@ -73,13 +73,13 @@ public sealed class Menu : MonoBehaviour
                 case 1:
                     Disable();
 
-                    foreach (var level in levels)
-                        level.Restart();
-
                     player.Teleport(
                         levels[selectedLevel].transform.position,
                         levels[selectedLevel].transform.rotation);
                     player.BroadcastMessage("Restart", SendMessageOptions.DontRequireReceiver);
+
+                    foreach (var level in levels)
+                        level.Restart();
 
                     break;
                 case 2:

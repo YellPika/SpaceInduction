@@ -31,6 +31,8 @@ public sealed class DoorBehaviour : MonoBehaviour
 
     private void Restart()
     {
+        animation.Stop();
+
         open = initiallyOpen;
         Start();
     }
