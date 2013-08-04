@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: fe70587c41c4f794fb76bff1d2cc6635
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

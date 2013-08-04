@@ -8,6 +8,10 @@ public sealed class DoorBehaviour : MonoBehaviour
     private bool initiallyOpen;
 
     [SerializeField]
+    private AudioClip slide;
+    private AudioSource slideSource;
+
+    [SerializeField]
     private bool open = false;
     public bool IsOpen { get { return open; } }
 
@@ -17,6 +21,8 @@ public sealed class DoorBehaviour : MonoBehaviour
     private void Awake()
     {
         initiallyOpen = open;
+
+        slideSource = gameObject.AddComponent<AudioSource>();
     }
 
     private void Start()
@@ -43,7 +49,7 @@ public sealed class DoorBehaviour : MonoBehaviour
             return false;
 
         animation.Play("Door.Open");
-        audio.Play();
+        slideSource.PlayOneShot(slide);
 
         open = true;
 
@@ -56,7 +62,7 @@ public sealed class DoorBehaviour : MonoBehaviour
             return false;
 
         animation.Play("Door.Close");
-        audio.Play();
+        slideSource.PlayOneShot(slide);
 
         open = false;
 

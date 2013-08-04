@@ -3327,6 +3327,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc26f0f51d92a3a4f984b6ffa779239e, type: 3}
   m_Name: 
+  footsteps: {fileID: 8300000, guid: c3017768785e64549bbe1e8ce681639c, type: 3}
   MoveSpeed: 10
   TurnSpeed: 135
   TurnAmount: 0
@@ -7846,7 +7847,6 @@ GameObject:
   - 4: {fileID: 1623894797}
   - 65: {fileID: 1623894804}
   - 111: {fileID: 1623894803}
-  - 82: {fileID: 1623894802}
   - 114: {fileID: 1623894796}
   - 114: {fileID: 1623894801}
   - 114: {fileID: 1623894795}
@@ -7913,6 +7913,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe70587c41c4f794fb76bff1d2cc6635, type: 3}
   m_Name: 
+  slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   open: 0
 --- !u!114 &1623894799
 MonoBehaviour:
@@ -7951,63 +7952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
   value: 0
---- !u!82 &1623894802
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 1281713326}
-  m_GameObject: {fileID: 1623894794}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!111 &1623894803
 Animation:
   m_ObjectHideFlags: 0
@@ -8255,7 +8199,6 @@ GameObject:
   - 4: {fileID: 1693992780}
   - 65: {fileID: 1693992788}
   - 111: {fileID: 1693992787}
-  - 82: {fileID: 1693992786}
   - 114: {fileID: 1693992782}
   - 114: {fileID: 1693992785}
   - 114: {fileID: 1693992781}
@@ -8280,6 +8223,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe70587c41c4f794fb76bff1d2cc6635, type: 3}
   m_Name: 
+  slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   open: 0
 --- !u!4 &1693992780
 Transform:
@@ -8360,63 +8304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
   value: 0
---- !u!82 &1693992786
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133975093}
-  m_GameObject: {fileID: 1693992778}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!111 &1693992787
 Animation:
   m_ObjectHideFlags: 0
