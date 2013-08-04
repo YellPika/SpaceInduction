@@ -31,7 +31,7 @@ public sealed class MovableBox : MonoBehaviour
     private void Update()
     {
         var velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.z);
-        moveSource.pitch = velocity.magnitude;
+        moveSource.pitch = velocity.magnitude * Time.timeScale;
     }
 
     private void OnTriggerStay(Collider collider)

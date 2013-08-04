@@ -30,11 +30,6 @@ public sealed class DoorBehaviour : MonoBehaviour
         gameObject.SampleAnimation(animation.GetClip("Door." + (open ? "Close" : "Open")), 0);
     }
 
-    private void Update()
-    {
-        audio.pitch = Time.timeScale;
-    }
-
     private void Restart()
     {
         animation.Stop();

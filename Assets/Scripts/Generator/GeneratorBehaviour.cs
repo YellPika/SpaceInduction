@@ -41,9 +41,6 @@ public sealed class GeneratorBehaviour : MonoBehaviour
                 target.enabled = true;
             }
 
-            if (Started != null)
-                Started(this, EventArgs.Empty);
-
             StartCoroutine(IncreasePitch());
         };
     }
@@ -74,6 +71,9 @@ public sealed class GeneratorBehaviour : MonoBehaviour
 
     private void Spin()
     {
+        if (Started != null)
+            Started(this, EventArgs.Empty);
+
         animation.Play("Generator.Spin");
     }
 

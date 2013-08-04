@@ -3,6 +3,10 @@ using UnityEngine;
 
 public sealed class GeneratorTrigger : MonoBehaviour
 {
+    [SerializeField]
+    private AudioClip insert;
+    private AudioSource insertSource;
+
     private GeneratorRodBehaviour[] rods;
     private int insertionCount = 0;
 
@@ -13,6 +17,8 @@ public sealed class GeneratorTrigger : MonoBehaviour
 
     private void Awake()
     {
+        insertSource = gameObject.AddComponent<AudioSource>();
+
         rods = GetComponentsInChildren<GeneratorRodBehaviour>();
     }
 
@@ -33,6 +39,8 @@ public sealed class GeneratorTrigger : MonoBehaviour
         var count = inventory.Remove();
         if (count == 0)
             return;
+
+        insertSource.PlayOneShot(insert);
 
         for (int i = 0; i < count; i++)
             rods[insertionCount++].Insert();

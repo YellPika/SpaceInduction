@@ -5,7 +5,16 @@ using UnityEngine;
 public sealed class Rod : MonoBehaviour
 {
     [SerializeField]
+    private AudioClip pickup;
+    private AudioSource pickupSource;
+
+    [SerializeField]
     private int index;
+
+    private void Awake()
+    {
+        pickupSource = gameObject.AddComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider sender)
     {
@@ -16,6 +25,8 @@ public sealed class Rod : MonoBehaviour
         //// Uncomment to enable ordered rods.
         //if (inventory.Total != index)
         //    return;
+
+        pickupSource.PlayOneShot(pickup);
 
         inventory.Add();
         renderer.enabled = false;

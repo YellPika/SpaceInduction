@@ -3144,7 +3144,7 @@ Transform:
   - {fileID: 400122}
   - {fileID: 400132}
   - {fileID: 400164}
-  - {fileID: 400224}
+  - {fileID: 400228}
   - {fileID: 400152}
   - {fileID: 400044}
   m_Father: {fileID: 400128}
@@ -3185,7 +3185,7 @@ Transform:
   - {fileID: 400036}
   - {fileID: 400032}
   - {fileID: 400120}
-  - {fileID: 400228}
+  - {fileID: 400224}
   - {fileID: 400112}
   - {fileID: 400046}
   m_Father: {fileID: 400072}
@@ -3381,7 +3381,7 @@ Transform:
   m_LocalPosition: {x: -.200000003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400184}
+  m_Father: {fileID: 400190}
 --- !u!4 &400226
 Transform:
   m_ObjectHideFlags: 1
@@ -3406,7 +3406,7 @@ Transform:
   m_LocalPosition: {x: -.200000003, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400190}
+  m_Father: {fileID: 400184}
 --- !u!4 &400230
 Transform:
   m_ObjectHideFlags: 1
@@ -6263,6 +6263,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 2
 --- !u!114 &11400058
 MonoBehaviour:
@@ -6335,6 +6336,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d6ee0020a6d7794281c578e9873f61c, type: 3}
   m_Name: 
+  insert: {fileID: 8300000, guid: 52838c5ea1bccc04f8fade46f0981dc5, type: 3}
 --- !u!114 &11400070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6345,6 +6347,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!114 &11400072
 MonoBehaviour:
@@ -6412,6 +6415,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 3
 --- !u!114 &11400084
 MonoBehaviour:
@@ -6693,6 +6697,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 1
 --- !u!114 &11400134
 MonoBehaviour:

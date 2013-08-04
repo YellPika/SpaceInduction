@@ -57,6 +57,11 @@ public sealed class ElevatorBehaviour : MonoBehaviour
             };
     }
 
+    private void Update()
+    {
+        moveSource.pitch = Time.timeScale;
+    }
+
     private void Start()
     {
         gameObject.SampleAnimation(animation.GetClip("Elevator." + (state == ElevatorState.Down ? "Up" : "Down")), 0);
