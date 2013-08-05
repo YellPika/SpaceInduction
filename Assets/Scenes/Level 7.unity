@@ -925,7 +925,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 9d33a0977b376284e893a7cb45d82891, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 9d33a0977b376284e893a7cb45d82891, type: 2}
       propertyPath: m_LocalPosition.y
@@ -933,7 +933,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 9d33a0977b376284e893a7cb45d82891, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 9d33a0977b376284e893a7cb45d82891, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1434,7 +1434,7 @@ Transform:
   m_PrefabInternal: {fileID: 116188741}
   m_GameObject: {fileID: 141784039}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 6, z: 11}
+  m_LocalPosition: {x: -7, y: 6, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1240401323}
@@ -8956,6 +8956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f06cd75b9070438679d4eba231747, type: 3}
   m_Name: 
   footstep: {fileID: 8300000, guid: 9b8dee6e20c868a4e8049b786fecc16d, type: 3}
+  moan: {fileID: 8300000, guid: ae68a0c05613c0f45b52bbda3fd42900, type: 3}
   targets:
   - {fileID: 289648170}
   - {fileID: 980414059}
@@ -8975,6 +8976,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a255f32fb942f41a86fc17c1cfb295, type: 3}
   m_Name: 
+  drain: {fileID: 8300000, guid: 41639af56ea7bc342aa167424e258706, type: 3}
   power: .25
 --- !u!135 &893807534
 SphereCollider:
