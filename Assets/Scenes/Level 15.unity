@@ -3295,7 +3295,7 @@ MonoBehaviour:
   targets:
   - {fileID: 420389002}
   - {fileID: 1830722843}
-  speed: .75
+  speed: .25
   turnSpeed: 1000
   tolerance: .100000001
 --- !u!114 &246465017
@@ -5858,7 +5858,7 @@ MonoBehaviour:
   targets:
   - {fileID: 1830722843}
   - {fileID: 476370216}
-  speed: .75
+  speed: .25
   turnSpeed: 1000
   tolerance: .100000001
 --- !u!114 &472700738
@@ -18667,7 +18667,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
       propertyPath: speed
-      value: .75
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
@@ -25863,7 +25863,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
       propertyPath: speed
-      value: .75
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
