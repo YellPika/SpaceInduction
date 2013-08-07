@@ -64,7 +64,7 @@ public sealed class MovableBox : MonoBehaviour
             }
 
             // to prevent the box from moving slower than the player.
-            rigidbody.velocity *= 1.075f;
+            rigidbody.velocity *= 1.25f;
         }
     }
 
