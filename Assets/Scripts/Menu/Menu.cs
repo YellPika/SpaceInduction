@@ -63,7 +63,7 @@ public sealed class Menu : MonoBehaviour
                 selectedLevel -= levels.Length;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             switch (selectedItem)
             {
