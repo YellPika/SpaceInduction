@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &6400187
 BoxCollider:
@@ -955,6 +956,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d6ee0020a6d7794281c578e9873f61c, type: 3}
   m_Name: 
+  insert: {fileID: 8300000, guid: 52838c5ea1bccc04f8fade46f0981dc5, type: 3}
 --- !u!65 &218374879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1036,6 +1038,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &255555348
 BoxCollider:
@@ -2172,7 +2175,6 @@ GameObject:
   - 4: {fileID: 438490452}
   - 65: {fileID: 438490460}
   - 111: {fileID: 438490459}
-  - 82: {fileID: 438490458}
   - 114: {fileID: 438490454}
   - 114: {fileID: 438490457}
   - 114: {fileID: 438490453}
@@ -2197,6 +2199,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe70587c41c4f794fb76bff1d2cc6635, type: 3}
   m_Name: 
+  slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   open: 0
 --- !u!4 &438490452
 Transform:
@@ -2277,63 +2280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
   value: 0
---- !u!82 &438490458
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 256180919}
-  m_GameObject: {fileID: 438490450}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!111 &438490459
 Animation:
   m_ObjectHideFlags: 0
@@ -3865,6 +3811,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a3054586f2c1944b2982f38b8dcf55, type: 3}
   m_Name: 
+  move: {fileID: 8300000, guid: 7e7887d09b600b241b1de34a86a9c02b, type: 3}
   smoothMaterial: {fileID: 13400000, guid: 48250fa768e2a124c94cd1c41ea1ad5f, type: 2}
   roughMaterial: {fileID: 13400000, guid: fb0aed5510fd87441b477f05d232e80e, type: 2}
 --- !u!65 &669333166
@@ -4246,6 +4193,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a3054586f2c1944b2982f38b8dcf55, type: 3}
   m_Name: 
+  move: {fileID: 8300000, guid: 7e7887d09b600b241b1de34a86a9c02b, type: 3}
   smoothMaterial: {fileID: 13400000, guid: 48250fa768e2a124c94cd1c41ea1ad5f, type: 2}
   roughMaterial: {fileID: 13400000, guid: fb0aed5510fd87441b477f05d232e80e, type: 2}
 --- !u!65 &703594392
@@ -6554,6 +6502,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a3054586f2c1944b2982f38b8dcf55, type: 3}
   m_Name: 
+  move: {fileID: 8300000, guid: 7e7887d09b600b241b1de34a86a9c02b, type: 3}
   smoothMaterial: {fileID: 13400000, guid: 48250fa768e2a124c94cd1c41ea1ad5f, type: 2}
   roughMaterial: {fileID: 13400000, guid: fb0aed5510fd87441b477f05d232e80e, type: 2}
 --- !u!65 &1180117778
@@ -7512,6 +7461,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a3054586f2c1944b2982f38b8dcf55, type: 3}
   m_Name: 
+  move: {fileID: 8300000, guid: 7e7887d09b600b241b1de34a86a9c02b, type: 3}
   smoothMaterial: {fileID: 13400000, guid: 48250fa768e2a124c94cd1c41ea1ad5f, type: 2}
   roughMaterial: {fileID: 13400000, guid: fb0aed5510fd87441b477f05d232e80e, type: 2}
 --- !u!65 &1458834414
@@ -8207,9 +8157,9 @@ AudioSource:
   m_GameObject: {fileID: 1481134384}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 519e968bb56be234396175b23551a750, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fcaa5490f4914de41a1308498ce6206f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .100000001
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9153,6 +9103,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ca558d55a2cbf347a95710fbcad67a8, type: 3}
   m_Name: 
+  running: {fileID: 8300000, guid: 2f8c76d223fc63f4c8cb45e935efec73, type: 3}
   targets:
   - {fileID: 1670914376}
   - {fileID: 468042177}
@@ -9559,6 +9510,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &1776278811
 BoxCollider:
@@ -11250,6 +11202,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc26f0f51d92a3a4f984b6ffa779239e, type: 3}
   m_Name: 
+  footsteps: {fileID: 8300000, guid: c3017768785e64549bbe1e8ce681639c, type: 3}
   MoveSpeed: 10
   TurnSpeed: 135
   TurnAmount: 0
@@ -11553,7 +11506,6 @@ GameObject:
   - 4: {fileID: 2059766252}
   - 65: {fileID: 2059766261}
   - 111: {fileID: 2059766260}
-  - 82: {fileID: 2059766259}
   - 114: {fileID: 2059766255}
   - 114: {fileID: 2059766258}
   - 114: {fileID: 2059766254}
@@ -11596,6 +11548,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe70587c41c4f794fb76bff1d2cc6635, type: 3}
   m_Name: 
+  slide: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
   open: 0
 --- !u!114 &2059766254
 MonoBehaviour:
@@ -11658,63 +11611,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839beda74129580488eb6e33bdbaf51f, type: 3}
   m_Name: 
   value: 0
---- !u!82 &2059766259
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 8200000, guid: cbee0fffe26a8f04ea9c7021f3f90354,
-    type: 2}
-  m_PrefabInternal: {fileID: 576488288}
-  m_GameObject: {fileID: 2059766251}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7955caafc2b6f814bb732a3f3670d93a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!111 &2059766260
 Animation:
   m_ObjectHideFlags: 0
@@ -11985,6 +11881,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce2bc93401a519544b6de67e775211e1, type: 3}
   m_Name: 
+  pickup: {fileID: 8300000, guid: 98bc38259c6bbe1469e029bf6bf21ef8, type: 3}
   index: 0
 --- !u!65 &2116895267
 BoxCollider:
