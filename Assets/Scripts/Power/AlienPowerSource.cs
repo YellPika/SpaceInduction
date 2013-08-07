@@ -7,6 +7,8 @@ public sealed class AlienPowerSource : PowerSource
     [SerializeField]
     private AudioClip drain;
     private AudioSource drainSource;
+
+    private float drainVolume;
     private float targetDrainVolume;
 
     [SerializeField]
@@ -51,7 +53,8 @@ public sealed class AlienPowerSource : PowerSource
                 target.Apply(-power);
         }
 
-        drainSource.volume = Mathf.Clamp01(drainSource.volume + Mathf.Sign(targetDrainVolume - drainSource.volume) * Time.deltaTime * 2);
+        drainVolume = Mathf.Clamp01(drainVolume + Mathf.Sign(targetDrainVolume - drainVolume) * 4 * Time.deltaTime);
+        drainSource.volume = Mathf.Pow(drainVolume, 4);
     }
 
     private void Restart()
