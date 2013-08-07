@@ -11,6 +11,9 @@ public sealed class MovableBox : MonoBehaviour
     private AudioClip move;
     private AudioSource moveSource;
 
+    private float volume;
+    private float targetVolume;
+
     [SerializeField]
     private PhysicMaterial smoothMaterial;
 
@@ -22,7 +25,6 @@ public sealed class MovableBox : MonoBehaviour
         moveSource = gameObject.AddComponent<AudioSource>();
         moveSource.clip = move;
         moveSource.loop = true;
-        moveSource.pitch = 0;
         moveSource.Play();
 
         startPosition = transform.position;
@@ -31,7 +33,10 @@ public sealed class MovableBox : MonoBehaviour
     private void Update()
     {
         var velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.z);
-        moveSource.pitch = velocity.magnitude * Time.timeScale;
+        targetVolume = Mathf.Clamp01(velocity.magnitude * Time.timeScale);
+        volume = Mathf.Clamp01(volume + Mathf.Sign(targetVolume - volume) * 4 * Time.deltaTime);
+
+        moveSource.volume = Mathf.Pow(volume, 4);
     }
 
     private void OnTriggerStay(Collider collider)
@@ -59,7 +64,7 @@ public sealed class MovableBox : MonoBehaviour
             }
 
             // to prevent the box from moving slower than the player.
-            rigidbody.velocity *= 1.25f;
+            rigidbody.velocity *= 1.075f;
         }
     }
 
