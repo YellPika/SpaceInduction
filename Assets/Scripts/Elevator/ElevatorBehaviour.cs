@@ -70,6 +70,7 @@ public sealed class ElevatorBehaviour : MonoBehaviour
     private void Restart()
     {
         state = initialState;
+        isFull = false;
         Start();
     }
 

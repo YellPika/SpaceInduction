@@ -11,6 +11,9 @@ public sealed class MovableBox : MonoBehaviour
     private AudioClip move;
     private AudioSource moveSource;
 
+    private BoxMover mover;
+    private Vector3 previousMoverPosition;
+
     private float volume;
     private float targetVolume;
 
@@ -19,7 +22,7 @@ public sealed class MovableBox : MonoBehaviour
 
     [SerializeField]
     private PhysicMaterial roughMaterial;
-    
+
     private void Awake()
     {
         moveSource = gameObject.AddComponent<AudioSource>();
@@ -32,44 +35,64 @@ public sealed class MovableBox : MonoBehaviour
 
     private void Update()
     {
-        var velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.z);
-        targetVolume = Mathf.Clamp01(velocity.magnitude * Time.timeScale);
-        volume = Mathf.Clamp01(volume + Mathf.Sign(targetVolume - volume) * 4 * Time.deltaTime);
+        targetVolume = 0;
 
+        rigidbody.mass = mover != null && mover.IsActivated ? 0.1f : 10;
+        collider.material = mover != null && mover.IsActivated ? smoothMaterial : roughMaterial;
+
+        if (mover != null)
+        {
+            if (mover.IsActivated)
+            {
+                var toMover = mover.transform.position - transform.position;
+                
+                if (Mathf.Abs(toMover.x) > Mathf.Abs(toMover.z))
+                {
+                    var offset = mover.transform.position.x - previousMoverPosition.x;
+                    rigidbody.MovePosition(rigidbody.position + Vector3.right * offset);
+                    rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+
+                    if (Mathf.Abs(offset) > 0.01f)
+                        targetVolume += 1;
+                }
+                else
+                {
+                    var offset = mover.transform.position.z - previousMoverPosition.z;
+                    rigidbody.MovePosition(rigidbody.position + Vector3.forward * offset);
+                    rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX;
+                    
+                    if (Mathf.Abs(offset) > 0.01f)
+                        targetVolume += 1;
+                }
+            }
+
+            previousMoverPosition = mover.transform.position;
+        }
+
+        volume = Mathf.Clamp01(volume + Mathf.Sign(targetVolume - volume) * 4 * Time.deltaTime);
         moveSource.volume = Mathf.Pow(volume, 4);
     }
 
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         var mover = collider.GetComponent<BoxMover>();
-        if (mover == null || !renderer.isVisible)
-            return;
-
-        rigidbody.mass = mover.IsActivated ? 0.1f : 10;
-        collider.material = mover.IsActivated ? smoothMaterial : roughMaterial;
-		
-        if (mover.IsActivated)
+        if (mover != null && renderer.isVisible)
         {
-			var offset = mover.transform.position - transform.position;
-
-            if (Mathf.Abs(offset.x) > Mathf.Abs(offset.z))
-            {
-                rigidbody.velocity = new Vector3(mover.rigidbody.velocity.x, 0, 0);
-                rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
-            }
-            else
-            {
-                rigidbody.velocity = new Vector3(0, 0, mover.rigidbody.velocity.z);
-                rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX;
-            }
-
-            // to prevent the box from moving slower than the player.
-            rigidbody.velocity *= 1.25f;
+            this.mover = mover;
+            previousMoverPosition = mover.transform.position;
         }
+    }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        var mover = collider.GetComponent<BoxMover>();
+        if (this.mover == mover)
+            this.mover = null;
     }
 
     private void Restart()
     {
         transform.position = startPosition;
+        mover = null;
     }
 }
