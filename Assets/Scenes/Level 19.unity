@@ -4212,6 +4212,10 @@ Prefab:
       propertyPath: targets.Array.data[3]
       value: 
       objectReference: {fileID: 434440307}
+    - target: {fileID: 11400000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
+      propertyPath: turnSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
   m_RootGameObject: {fileID: 1589475751}
@@ -8540,7 +8544,6 @@ Transform:
   - {fileID: 389138863}
   - {fileID: 278243038}
   - {fileID: 1192771305}
-  - {fileID: 1082943336}
   - {fileID: 1416641051}
   - {fileID: 228202704}
   - {fileID: 551072962}
@@ -10602,7 +10605,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 434440306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 3, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1438054339}
@@ -13253,7 +13256,7 @@ MonoBehaviour:
   - {fileID: 434440307}
   - {fileID: 1063508572}
   speed: .75
-  turnSpeed: 15
+  turnSpeed: 1000
   tolerance: .100000001
 --- !u!114 &537292690
 MonoBehaviour:
@@ -16647,6 +16650,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1748535847}
+  - {fileID: 1082943336}
   - {fileID: 1365587196}
   - {fileID: 1690428827}
   - {fileID: 1953403865}
@@ -16751,6 +16755,10 @@ Prefab:
       propertyPath: targets.Array.data[3]
       value: 
       objectReference: {fileID: 475708776}
+    - target: {fileID: 11400000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
+      propertyPath: turnSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
   m_RootGameObject: {fileID: 1462860901}
@@ -17176,7 +17184,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 352591402}
+    m_TransformParent: {fileID: 644491589}
     m_Modifications:
     - target: {fileID: 400000, guid: 1e7cad216ffe01e4a8339cc061732d9b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -17204,6 +17212,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e7cad216ffe01e4a8339cc061732d9b, type: 2}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1e7cad216ffe01e4a8339cc061732d9b, type: 2}
+      propertyPath: value.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1e7cad216ffe01e4a8339cc061732d9b, type: 2}
+      propertyPath: value.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 1e7cad216ffe01e4a8339cc061732d9b, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -24404,7 +24424,7 @@ MonoBehaviour:
   - {fileID: 475708776}
   - {fileID: 807058547}
   speed: .75
-  turnSpeed: 15
+  turnSpeed: 1000
   tolerance: .100000001
 --- !u!114 &957190921
 MonoBehaviour:
@@ -25530,6 +25550,10 @@ Prefab:
       propertyPath: targets.Array.data[3]
       value: 
       objectReference: {fileID: 807058547}
+    - target: {fileID: 11400000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
+      propertyPath: turnSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
   m_RootGameObject: {fileID: 957190918}
@@ -28031,6 +28055,7 @@ GameObject:
   - 114: {fileID: 1082943339}
   - 114: {fileID: 1082943338}
   - 114: {fileID: 1082943337}
+  - 114: {fileID: 1082943343}
   m_Layer: 0
   m_Name: Hall
   m_TagString: Untagged
@@ -28051,7 +28076,7 @@ Transform:
   - {fileID: 1027078853}
   - {fileID: 2021470138}
   - {fileID: 48215974}
-  m_Father: {fileID: 352591402}
+  m_Father: {fileID: 644491589}
 --- !u!114 &1082943337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28059,7 +28084,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 666463739}
   m_GameObject: {fileID: 1082943335}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4a5ae3f31657e44a8c3ae5f50eb1a80, type: 3}
   m_Name: 
@@ -28112,7 +28137,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524cb44e73ea6bc4da3943f291fb10ce, type: 3}
   m_Name: 
-  value: {r: 1, g: 1, b: 1, a: 1}
+  value: {r: 0, g: 0, b: 1, a: 1}
 --- !u!65 &1082943342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28126,6 +28151,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.5, z: 2}
   m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!114 &1082943343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1082943335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f36a04fae5689b4796beb63bec2ae0a, type: 3}
+  m_Name: 
+  efficiency: 1
 --- !u!1 &1083858937
 GameObject:
   m_ObjectHideFlags: 0
@@ -36717,6 +36753,10 @@ Prefab:
       propertyPath: targets.Array.data[3]
       value: 
       objectReference: {fileID: 1063508572}
+    - target: {fileID: 11400000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
+      propertyPath: turnSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e59394e9cf183a43b0896d4fc4b7bc9, type: 2}
   m_RootGameObject: {fileID: 537292688}
@@ -37686,7 +37726,7 @@ MonoBehaviour:
   - {fileID: 1063508572}
   - {fileID: 475708776}
   speed: .75
-  turnSpeed: 15
+  turnSpeed: 1000
   tolerance: .100000001
 --- !u!114 &1462860904
 MonoBehaviour:
@@ -40756,7 +40796,7 @@ MonoBehaviour:
   - {fileID: 807058547}
   - {fileID: 434440307}
   speed: .75
-  turnSpeed: 15
+  turnSpeed: 1000
   tolerance: .100000001
 --- !u!114 &1589475753
 MonoBehaviour:

@@ -44492,7 +44492,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe741906e3003a44a0f473b0a22a403, type: 3}
   m_Name: 
-  timeLimit: 210
+  timeLimit: 230
   number: 18
 --- !u!114 &11401116
 MonoBehaviour:
