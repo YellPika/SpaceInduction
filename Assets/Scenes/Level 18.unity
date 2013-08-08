@@ -16311,11 +16311,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 685010600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 18, z: 0}
+  m_LocalPosition: {x: -4, y: 18, z: 27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 468465730}
-  m_Father: {fileID: 757454477}
+  m_Father: {fileID: 773003136}
 --- !u!1 &687461380
 GameObject:
   m_ObjectHideFlags: 0
@@ -16527,7 +16527,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1124991148}
-  m_Father: {fileID: 757454477}
+  m_Father: {fileID: 773003136}
 --- !u!1 &694333231
 GameObject:
   m_ObjectHideFlags: 0
@@ -18141,10 +18141,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1294158251}
-  - {fileID: 1294608190}
-  - {fileID: 690733306}
-  - {fileID: 685010601}
+  - {fileID: 773003136}
   - {fileID: 850944665}
   - {fileID: 537716713}
   - {fileID: 1158378869}
@@ -18447,6 +18444,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .200000003, y: 2.9000001, z: 3.20000005}
   m_Center: {x: -1.10000002, y: 1.25, z: -.400000006}
+--- !u!1 &773003135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 773003136}
+  m_Layer: 0
+  m_Name: Box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773003136
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773003135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 690733306}
+  - {fileID: 1294158251}
+  - {fileID: 1294608190}
+  - {fileID: 685010601}
+  m_Father: {fileID: 757454477}
 --- !u!1 &776307782
 GameObject:
   m_ObjectHideFlags: 0
@@ -33011,7 +33038,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1285717481}
-  m_Father: {fileID: 757454477}
+  m_Father: {fileID: 773003136}
 --- !u!1 &1294608189
 GameObject:
   m_ObjectHideFlags: 0
@@ -33038,7 +33065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437471532}
-  m_Father: {fileID: 757454477}
+  m_Father: {fileID: 773003136}
 --- !u!1 &1296000961
 GameObject:
   m_ObjectHideFlags: 0
