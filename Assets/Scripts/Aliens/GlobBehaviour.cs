@@ -44,6 +44,8 @@ public sealed class GlobBehaviour : MonoBehaviour
     {
         footstepIndex = 0;
         travelPath = TravelPath();
+
+        animation["Glob.Walk"].time = Random.Range(0.0f, 100.0f);
     }
 
     private void Restart()
