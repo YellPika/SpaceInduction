@@ -37,12 +37,13 @@ public sealed class MovableBox : MonoBehaviour
     {
         targetVolume = 0;
 
-        rigidbody.mass = mover != null && mover.IsActivated ? 0.1f : 10;
-        collider.material = mover != null && mover.IsActivated ? smoothMaterial : roughMaterial;
-
+        rigidbody.mass = mover != null && mover.IsActivated && renderer.isVisible ? 0.1f : 10;
+        rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        collider.material = mover != null && mover.IsActivated && renderer.isVisible ? smoothMaterial : roughMaterial;
+        
         if (mover != null)
         {
-            if (mover.IsActivated)
+            if (mover.IsActivated && renderer.isVisible)
             {
                 var toMover = mover.transform.position - transform.position;
                 
