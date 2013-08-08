@@ -51,7 +51,7 @@ public sealed class MovableBox : MonoBehaviour
                 if (Mathf.Abs(toMover.x) > Mathf.Abs(toMover.z))
                 {
                     var offset = mover.transform.position.x - previousMoverPosition.x;
-                    rigidbody.MovePosition(rigidbody.position + Vector3.right * offset);
+                    rigidbody.MovePosition(rigidbody.position + Vector3.right * offset * 1.05f);
                     rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
 
                     if (Mathf.Abs(offset) > 0.01f)
@@ -60,7 +60,7 @@ public sealed class MovableBox : MonoBehaviour
                 else
                 {
                     var offset = mover.transform.position.z - previousMoverPosition.z;
-                    rigidbody.MovePosition(rigidbody.position + Vector3.forward * offset);
+                    rigidbody.MovePosition(rigidbody.position + Vector3.forward * offset * 1.05f);
                     rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX;
                     
                     if (Mathf.Abs(offset) > 0.01f)
