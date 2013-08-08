@@ -34,6 +34,10 @@ public sealed class GlobBehaviour : MonoBehaviour
     private void Awake()
     {
         footstepSource = gameObject.AddComponent<AudioSource>();
+        footstepSource.minDistance = 2;
+        footstepSource.maxDistance = 5;
+        footstepSource.rolloffMode = AudioRolloffMode.Linear;
+
         moanSource = gameObject.AddComponent<AudioSource>();
 
         initialPosition = transform.position;

@@ -28,6 +28,7 @@ public sealed class MovableBox : MonoBehaviour
         moveSource = gameObject.AddComponent<AudioSource>();
         moveSource.clip = move;
         moveSource.loop = true;
+        moveSource.mute = true;
         moveSource.Play();
 
         startPosition = transform.position;
@@ -72,6 +73,7 @@ public sealed class MovableBox : MonoBehaviour
 
         volume = Mathf.Clamp01(volume + Mathf.Sign(targetVolume - volume) * 4 * Time.deltaTime);
         moveSource.volume = Mathf.Pow(volume, 4);
+        moveSource.mute = Mathf.Approximately(moveSource.volume, 0);
     }
 
     private void OnTriggerEnter(Collider collider)

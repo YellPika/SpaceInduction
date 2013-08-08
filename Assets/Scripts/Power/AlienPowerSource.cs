@@ -8,9 +8,6 @@ public sealed class AlienPowerSource : PowerSource
     private AudioClip drain;
     private AudioSource drainSource;
 
-    private float drainVolume;
-    private float targetDrainVolume;
-
     [SerializeField]
     private float power = 0.75f;
     private HashSet<PowerProperty> targets = new HashSet<PowerProperty>();
@@ -20,7 +17,7 @@ public sealed class AlienPowerSource : PowerSource
         drainSource = gameObject.AddComponent<AudioSource>();
         drainSource.clip = drain;
         drainSource.loop = true;
-        drainSource.volume = 0;
+        drainSource.mute = true;
         drainSource.Play();
     }
 
@@ -40,21 +37,20 @@ public sealed class AlienPowerSource : PowerSource
 
     private void Update()
     {
-        targetDrainVolume = 0;
+        var mute = true;
 
         foreach (var target in targets)
         {
             if (target.GetComponent<PlayerBehaviour>() != null)
             {
                 target.Apply(power * Time.deltaTime * -0.5f);
-                targetDrainVolume = 1;
+                mute = false;
             }
             else
                 target.Apply(-power);
         }
 
-        drainVolume = Mathf.Clamp01(drainVolume + Mathf.Sign(targetDrainVolume - drainVolume) * 4 * Time.deltaTime);
-        drainSource.volume = Mathf.Pow(drainVolume, 4);
+        drainSource.mute = mute;
     }
 
     private void Restart()
