@@ -10797,6 +10797,7 @@ GameObject:
   - 114: {fileID: 451224445}
   - 114: {fileID: 451224444}
   - 114: {fileID: 451224443}
+  - 114: {fileID: 451224449}
   m_Layer: 0
   m_Name: Generator
   m_TagString: Untagged
@@ -10990,6 +10991,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.5, z: 2}
   m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!114 &451224449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451224439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d3f94add6da474e8b3d20f114781bb, type: 3}
+  m_Name: 
+  target: {fileID: 412160673}
 --- !u!1 &452375489
 GameObject:
   m_ObjectHideFlags: 0
