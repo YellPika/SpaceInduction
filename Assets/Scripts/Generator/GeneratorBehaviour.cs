@@ -20,6 +20,8 @@ public sealed class GeneratorBehaviour : MonoBehaviour
         runningSource.clip = running;
         runningSource.pitch = 0;
         runningSource.loop = true;
+        runningSource.maxDistance = 6;
+        runningSource.rolloffMode = AudioRolloffMode.Linear;
         runningSource.Play();
 
         var trigger = GetComponentInChildren<GeneratorTrigger>();
