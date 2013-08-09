@@ -16,6 +16,11 @@ public sealed class PlayerWheelBehaviour : MonoBehaviour
         footstepsSource.clip = footsteps;
         footstepsSource.volume = 0;
         footstepsSource.loop = true;
+        //footstepsSource.Play();
+    }
+
+    private void Start()
+    {
         footstepsSource.Play();
     }
 

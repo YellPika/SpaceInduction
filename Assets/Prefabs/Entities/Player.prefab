@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   footsteps: {fileID: 8300000, guid: c3017768785e64549bbe1e8ce681639c, type: 3}
   MoveSpeed: 10
-  TurnSpeed: 135
+  TurnSpeed: 90
   TurnAmount: 0
 --- !u!114 &11400016
 MonoBehaviour:
